@@ -4,7 +4,7 @@
 
 HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are two of the building block languages of web applications, and they are considered "front-end" technologies. HTML gives content *structure* and *meaning* by defining the "elements" that the web page is made up of. CSS is a presentational language that is used for only for the *layout* and *styling* of a webpage. JavaScript, together with HTML and CSS, is responsible for bringing our websites to life.
 
-![HTML-CSS-JS](HTML-CSS-JS.gif)
+![HTML-CSS-JS](/images/HTML-CSS-JS.gif)
 
 ## HTML
 
