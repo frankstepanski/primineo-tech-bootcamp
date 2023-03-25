@@ -224,8 +224,8 @@ a certain order:
 6. The server sends a response
 7. Repeat steps 6 and 7 until the browser has all of the resources it needs
 
-![Response-Request](request_response.png)
-![URL](url.png)
+![Response-Request](imagesrequest_response.png)
+![URL](images/url.png)
 
 ## Concurrent Tasks in JavaScript (faking concurrency with asynchronous)
 
@@ -241,7 +241,7 @@ You specify what you want, and provide <strong>callback functions</strong> that 
 
 This "faking" is made possible with the event loop. When asynchronous operations are interpreted, they are not executed immediately. They are placed into an ```event queue``` and executed later. Those operations will be run as soon as they can (after the synchronous code has been run). 
 
-![Event Queue](event_queue.png)
+![Event Queue](images/event_queue.png)
 
 ## AJAX
 
@@ -272,7 +272,7 @@ In the client-server model, web clients make requests to servers, which send bac
 
 These rules require request and response messages to be structured in a specific way:
 
-![HTTP-Messages](http_messages.png)
+![HTTP-Messages](images/http_messages.png)
 
 HTTP messages are broken up into 4 parts:
 
