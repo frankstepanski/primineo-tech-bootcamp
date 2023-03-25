@@ -13,9 +13,14 @@ A bundler is a development tool that will compress and minify all your code. And
 
 The bundler tool that is included within the <a href="https://create-react-app.dev/">Create React App</a> tool is ```Webpack```. <a href="https://webpack.js.org/">Webpack</a> is the most popular bundler tool by a large margin, but that does not mean it does not have its problems. 
 
-> Webpack can be confusing to <a href="https://webpack.js.org/configuration/">configure</a> manually; can be slow because it has to bundle all files in node_modules; bundle sizes can be large because it required polyfills for loading modules.
 
-But never fear, there are alternatives. 😊
+### Webpack
+
+...
+
+> Webpack can be confusing to <a href="https://webpack.js.org/configuration/">configure</a> manually.
+
+There are alternatives. 😊
 
 ### Parcel
 
