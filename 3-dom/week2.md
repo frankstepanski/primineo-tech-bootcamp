@@ -243,7 +243,7 @@ You can use a <a href="https://specificity.keegan.st/">Specificity Calculator</a
 All HTML elements can be thought of as boxes. In CSS, the "box model" is used when talking about the design and layout of elements, and it can be thought of essentially as a 4 part box that wraps around every element.
 
 Here's a visual representation:
-![css-box-model](box-model.png)
+![css-box-model](images/box-model.png)
 
 Here's a brief description of each part:
 
@@ -283,14 +283,14 @@ Example CSS:
 
 Result:
 
-![box-sizing](box-sizing.png)
+![box-sizing](images/box-sizing.png)
 
 ### Floats
 
 The `float` property places an element on the left or right side of it's container, and allows text and inline elements to wrap around it. The `clear` property can be used to prevent text or inline elements from wrapping around an element, and it can specify the left, right, or both sides.
 
 See the visual example of floats below:
-![float-example](float-example.png)
+![float-example](images/float-example.png)
 
 ### Colors
 
@@ -429,7 +429,7 @@ Media queries can be implemented in CSS sheets themselves as seen above, as well
 <link rel='stylesheet' media='screen and (min-width: 701px)' href='medium.css' />
 ```
 
-![break points](breakpoints.png)
+![break points](images/breakpoints.png)
 
 #### Min-Width
 
