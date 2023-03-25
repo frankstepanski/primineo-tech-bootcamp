@@ -6,7 +6,7 @@ DOM is the acronym we use for `Document Object Model`. The DOM is an object repr
 
 It's easy to think of the DOM <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core">as a tree</a>. Each element that exists on the DOM is known as a `node`. We can target these nodes with Javascript to create functionality within our page.
 
-![DOM TREE](domtree.png)
+![DOM TREE](images/domtree.png)
 
 ## Interacting With The DOM
 
