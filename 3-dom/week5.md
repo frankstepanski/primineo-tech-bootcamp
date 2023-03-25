@@ -285,7 +285,7 @@ HTTP messages are broken up into 4 parts:
 
 GET tells the server what the request is trying to do - get a resource. The start-line in our example tells the server, “I want to get the resource at /,” and that / is the website’s homepage or root. GET is one of several HTTP methods that describe what a request is trying to do. 
 
-![HTTP-Messages](request_types.png)
+![HTTP-Messages](images/request_types.png)
 
 These are known as “CRUD operations.” When folks refer to a CRUD app, they mean one that can create, read, update, and delete resources.
 
