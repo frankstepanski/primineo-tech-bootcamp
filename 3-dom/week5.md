@@ -224,7 +224,7 @@ a certain order:
 6. The server sends a response
 7. Repeat steps 6 and 7 until the browser has all of the resources it needs
 
-![Response-Request](imagesrequest_response.png)
+![Response-Request](images/request_response.png)
 ![URL](images/url.png)
 
 ## Concurrent Tasks in JavaScript (faking concurrency with asynchronous)
