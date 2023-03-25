@@ -380,7 +380,7 @@ fetch('https://api.github.com/repos/jquery/jquery/commits')
   .then(json => console.log(json));
 ```
 
-![HTTP-Messages](caniuse_fetch.png)
+![HTTP-Messages](images/caniuse_fetch.png)
 
 ### Promises and then
 
