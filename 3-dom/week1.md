@@ -417,7 +417,7 @@ Every HTML element has a default display property value assigned depending on th
 
 Here's a visual representation of differences between the properties:
 
-![inline-inline-block-block](inline-block.png)
+![inline-inline-block-block](images/inline-block.png)
 
 <details>
     <summary>Inline, Inline-block, Block Information</summary>
