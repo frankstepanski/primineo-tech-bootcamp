@@ -1,0 +1,38 @@
+# Week 1
+
+ - <a href="https://www.codecademy.com/article/what-is-programming">What is Programming?</a> 
+ - <a href="https://javascript.info/hello-world">The "script" tag - embedding JavaScript in the browser</a>
+ - <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server Visual Studio Extension</a>
+
+ - <a href="https://javascript.info/devtools">Developer console</a>
+ - <a href="https://www.ladybug.dev/episodes/debugging">Ladybug Podcast - Debugging</a>
+ - <a href="https://javascript.info/types">Data types</a> 
+ - <a href="https://javascript.info/variables">Variables</a>
+ - <strong>Note:</strong> <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20%26%20grammar/ch1.md#values-as-types">Values have types, not variables</a>.
+ - Expressions:
+    - <a href="https://javascript.info/operators#maths">Math operators</a>
+    - <strong>note:</strong> <a href ="https://www.youtube.com/watch?v=PZRI1IfStY0">Floating point math</a>
+    - <a href="https://javascript.info/operators#assignment">Assignment operators</a>
+    - <a href="https://javascript.info/logical-operators">Logical operators</a>
+    - <a href="https://javascript.info/comparison">Comparison operators</a>
+ - Extra Coding Practice:
+   - <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript">FreeCodeCamp.org<a/>
+   - <a href="https://coderbyte.com/starter-course/learn-javascript-in-one-week">Coderbyte</a>
+ - Additional Resources:
+   - <a href="https://roadmap.sh/frontend">Frontend Roadmap</a>
+   - <a href="https://javascript.info/">JavaScript.Info</a>
+   - <a href="https://www.w3schools.com/js/default.asp">W3Schools.com</a>
+   - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a>
+   - Visual Studio Code Shortcuts
+     - <a href="assets/vsc-mac-keyboard-shortcuts.pdf">Mac</a>
+     - <a href="assets/vsc-windows-keyboard-shortcuts.pdf">Windows</a>
+   - <a href="https://wesbos.com/javascript">Wes Bos JavaScript Reference</a>
+   - More technical (not required):
+     - <a href="https://www.youtube.com/watch?v=9ooYYRLdg_g">Primitive Data Types Under the Hood</a>
+     - <a href="https://www.youtube.com/watch?v=uut8y9RHG48">JavaScript Under the Hood</a>
+     - <a href="https://www.youtube.com/watch?v=BMKWdLX9w3M">JavaScript engine</a>
+     - <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch1.md#compiled-vs-interpreted">Compiling vs Interpretation</a>
+     - <a href="https://www.youtube.com/watch?v=BHttnG4kOdY">JavaScript JIT (Just in Time) Compilation</a>
+     - <a href="https://www.youtube.com/watch?v=Wpeym1_lmPo">Java vs JavaScript</a>
+     - <a href="https://www.youtube.com/watch?v=C06MohLG_3s">What is an AST (Abstract Syntax Tree)?</a>
+     - <a href="https://astexplorer.net/">AST Explorer</a>
