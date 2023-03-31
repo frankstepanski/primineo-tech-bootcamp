@@ -20,6 +20,10 @@ The bundler tool that is included within the <a href="https://create-react-app.d
 
 > Webpack can be confusing to <a href="https://webpack.js.org/configuration/">configure</a> manually.
 
+https://www.youtube.com/watch?v=ILcb7BD9R90
+https://createapp.dev/
+
+
 There are alternatives. 😊
 
 ### Parcel
