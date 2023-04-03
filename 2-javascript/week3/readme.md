@@ -10,6 +10,7 @@
    - <a href="https://javascript.info/function-basics">Basics</a>
    - <a href="https://javascript.info/function-expressions">Function expressions</a>
    - <a href="https://javascript.info/arrow-functions-basics">Arrow functions</a>
+   - <a href="https://www.sitepoint.com/callbacks-javascript/">Callbacks</a>
 - Objects:
     - <a href="https://javascript.info/object">Objects</a>
     - <a href="https://javascript.info/object-methods">Object methods</a>
