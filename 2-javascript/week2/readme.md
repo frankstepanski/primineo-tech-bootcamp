@@ -1,7 +1,7 @@
 # Week 2
 
  - <a href="https://exploringjs.com/impatient-js/ch_syntax.html#statement-vs-expression">Expressions vs statement</a>
- - Control flow
+ - Control flow:
    - <a href="https://javascript.info/comparison">Comparison operators</a>
    - <a href="https://javascript.info/logical-operators">Logical operators</a>
    - <a href= "https://dorey.github.io/JavaScript-Equality-Table/unified/">Equality in JavaScript</a>
