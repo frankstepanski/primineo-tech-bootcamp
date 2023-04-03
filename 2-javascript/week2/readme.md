@@ -15,7 +15,7 @@
     - <a href="https://www.youtube.com/watch?v=5LiGWfk4WTo">looping through array and strings</a>
  - Additional Resources: 
     - Reference:
-      -  <a href="https://pythontutor.com/javascript.html#mode=edit">Visualizer</a> (follow the flow your code)
+      -  <a href="https://pythontutor.com/javascript.html#mode=edit">Visualizer</a> (follow the flow of your code)
     - Youtube playlists:
       - <a href="https://www.youtube.com/watch?v=x2RNw4M6cME">Colt Steele</a>
       - <a href="https://www.youtube.com/playlist?list=PL7TLF4T4Tq2TtNmadzRfxYIB9683uhpbD">Dev Dreamer</a> 
