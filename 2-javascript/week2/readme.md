@@ -12,7 +12,7 @@
     - <a href="https://www.youtube.com/watch?v=wxds6MAtUQ0">what is a loop?</a>
     - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">for</a> 
     - <a href="https://javascript.info/while-for#the-while-loop">while</a>
-    - looping through strings
+    - <a href="https://www.youtube.com/watch?v=5LiGWfk4WTo">looping through array and strings</a>
  - Additional Resources: 
     - Reference:
       -  <a href="https://pythontutor.com/javascript.html#mode=edit">Visualizer</a> (follow the flow your code)
