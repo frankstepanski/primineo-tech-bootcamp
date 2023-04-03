@@ -8,7 +8,7 @@
    - <a href="https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/">Why we need them?</a>
 - Synchronous vs Asynchronous JavaScript:
     - <a href="https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/">Examples</a>
-- REST API
+- REST API:
     - <a href="https://www.youtube.com/watch?v=SLwpqD8n3d0&t=8s">Explanation</a>
     - <a href="https://www.youtube.com/watch?v=-mN3VyJuCjM&t=39s">Examples</a>
 - Promises:
