@@ -6,7 +6,7 @@ Bootstrap is a framework of readily available code that integrates with HTML to 
 
 There are also some optional JavaScript libraries if we want to add some interactivity to our website and these are inserted at the end of our <body> element. 
 
-![bootstrap](images/v5-home.png)
+![bootstrap](images/bootstrap.png)
 
 ### Installation
 
