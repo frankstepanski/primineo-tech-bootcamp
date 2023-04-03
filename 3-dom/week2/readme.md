@@ -281,10 +281,6 @@ Example CSS:
 }
 ```
 
-Result:
-
-![box-sizing](images/box-sizing.png)
-
 ### Floats
 
 The `float` property places an element on the left or right side of it's container, and allows text and inline elements to wrap around it. The `clear` property can be used to prevent text or inline elements from wrapping around an element, and it can specify the left, right, or both sides.
