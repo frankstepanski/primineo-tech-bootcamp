@@ -3,13 +3,15 @@
  - <a href="https://exploringjs.com/impatient-js/ch_syntax.html#statement-vs-expression">Expressions vs statement</a>
  - Control flow
    - <a href="https://javascript.info/comparison">Comparison operators</a>
+   - <a href="https://javascript.info/logical-operators">Logical operators</a>
    - <a href= "https://dorey.github.io/JavaScript-Equality-Table/unified/">Equality in JavaScript</a>
    - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">truthy</a> vs <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>
    - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion">Type coercion</a>
-   - if statements
+   - <a href="https://javascript.info/ifelse">if statements</a>
   - Loops (iteration)
-    - for 
-    - while and do...while
+    - <a href="https://www.youtube.com/watch?v=wxds6MAtUQ0">what is a loop?</a>
+    - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for_statement">for</a> 
+    - <a href="https://javascript.info/while-for#the-while-loop">while</a>
     - looping through strings
  - Additional Resources: 
     - Reference:
