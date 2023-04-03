@@ -4,7 +4,8 @@
   - <a href="https://www.youtube.com/watch?v=55l-aZ7_F24">Definition of Array</a>
   - <a href="https://javascript.info/array">Array documentation</a>
   - <a href="https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/">Introduction to Arrays</a>
-  - <a href="https://www.freecodecamp.org/news/the-javascript-array-handbook/">Array methods</a>
+  - <a href="https://www.w3schools.com/js/js_array_methods.asp">Array methods overview</a>
+  - <a href="https://www.freecodecamp.org/news/the-javascript-array-handbook/">More on array methods</a>
 - Functions:
    - <a href="https://javascript.info/function-basics">Basics</a>
    - <a href="https://javascript.info/function-expressions">Function expressions</a>
