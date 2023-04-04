@@ -1,6 +1,6 @@
 # Week 1
 
-## Overview
+### Overview
 
 Broadly, there are two kinds of values.
 
