@@ -14,6 +14,12 @@ Broadly, there are two kinds of values.
 An **expression** in JavaScript is a piece of code that produces a value. 
 ```
 console.log(1 + 2); 
+
+// 1 + 2 is an expression that produces the value 3
+
+console.log(3);
+
+// 3 is an expression that produces the value 3
 ```
 
 A **statement** in JavaScript is a piece of code that performs an action. It doesn't produce a value.
