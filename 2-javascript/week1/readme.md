@@ -1,7 +1,7 @@
 # Week 1
 
  - <a href="https://www.codecademy.com/article/what-is-programming">What is Programming?</a> 
- - <a href="https://javascript.info/hello-world">The "script" tag - embedding JavaScript in the browser</a>
+ - <a href="https://javascript.info/hello-world#the-script-tag">The "script" tag - embedding JavaScript in the browser</a>
  - <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
  - <a href="https://javascript.info/devtools">Developer console</a>
  - <a href="https://www.ladybug.dev/episodes/debugging">Ladybug Podcast - Debugging</a>
