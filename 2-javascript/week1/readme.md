@@ -16,7 +16,7 @@ An **expression** in JavaScript is a piece of code that produces a value.
 console.log(1 + 2); 
 ```
 
-A statement in JavaScript is a piece of code that performs an action. It doesn't produce a value.
+A **statement** in JavaScript is a piece of code that performs an action. It doesn't produce a value.
 
 ```
 let x = 1 + 2;
