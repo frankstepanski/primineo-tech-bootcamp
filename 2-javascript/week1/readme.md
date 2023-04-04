@@ -11,10 +11,15 @@ Broadly, there are two kinds of values.
 
 >Everything in JavaScript is not an object. A string has properties and methods but JavaScript just creates a temporary object to access them. This is called boxing (primitive value wrapped in an object)
 
-An expression in JavaScript is a piece of code that produces a value. There are two kinds of expressions.
-
+An **expression** in JavaScript is a piece of code that produces a value. 
 ```
 console.log(1 + 2); 
+```
+
+A statement in JavaScript is a piece of code that performs an action. It doesn't produce a value.
+
+```
+let x = 1 + 2;
 ```
 
 
