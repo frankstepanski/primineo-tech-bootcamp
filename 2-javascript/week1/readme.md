@@ -7,8 +7,15 @@ Broadly, there are two kinds of values.
 - **Primitive values:**  Numbers, strings, booleans, null, undefined. You can point to them, but you can't change them. Immutable.
 - **Reference values:** Objects, arrays, functions. They are mutable. You can change them.
 
+![types](images/types.png)
+
 >Everything in JavaScript is not an object. A string has properties and methods but JavaScript just creates a temporary object to access them. This is called boxing (primitive value wrapped in an object)
 
+An expression in JavaScript is a piece of code that produces a value. There are two kinds of expressions.
+
+```
+console.log(1 + 2); 
+```
 
 
  - <a href="https://www.codecademy.com/article/what-is-programming">What is Programming?</a> 
