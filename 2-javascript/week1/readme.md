@@ -1,5 +1,16 @@
 # Week 1
 
+## Overview
+
+Broadly, there are two kinds of values.
+
+- Primitive values:  Numbers, strings, booleans, null, undefined, symbols. They are immutable. You can point to them, but you can't change them.
+- Reference values: Objects, arrays, functions. They are mutable. You can change them.
+
+>Everything in JavaScript is not an object. A string has properties and methods but JavaScript just creates a temporary object to access them. This is called boxing (primitive value wrapped in an object)
+
+[types](images/types.png)
+
  - <a href="https://www.codecademy.com/article/what-is-programming">What is Programming?</a> 
  - <a href="https://javascript.info/hello-world#the-script-tag">The "script" tag - embedding JavaScript in the browser</a>
  - <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
