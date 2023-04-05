@@ -6,7 +6,7 @@ In JavaScript, there are several kinds of equality.
 
 - **Strict equality** (`===`) checks if two values are the same type and have the same value.
 - **Loose equality** (`==`) checks if two values have the same value, but it will convert the values to the same type before comparing them.
-- **Object equality** (`Object.is`) checks if two values are the same type and have the same value. It is similar to strict equality, but it has some special cases.
+- **Object equality** (`Object.is`) checks if two values are the same type and have the same value.
 
 ### Control flow
 
