@@ -16,6 +16,3 @@
     - <a href="https://www.w3schools.com/js/js_objects.asp">Quick summary</a>
     - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a>
     - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#enumerating_properties">Looping through objects</a>
-- Equality:
-    - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">Double vs Triple Equal</a>
- 
