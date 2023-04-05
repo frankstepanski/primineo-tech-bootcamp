@@ -28,7 +28,7 @@
 - Mock Interviews
     - [Pramp](https://www.pramp.com/#/)
     - [Interviewing.io](https://interviewing.io/) **not free**
-    - [prepfully](https://prepfully.com/practice-interviews) **not free**
+    - [Prepfully](https://prepfully.com/practice-interviews) **not free**
 
 - Continued Learning
     - [Frontend Masters](https://frontendmasters.com/) **not free**
