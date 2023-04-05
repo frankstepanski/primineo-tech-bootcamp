@@ -12,7 +12,8 @@ Broadly, there are two kinds of values.
 >Everything in JavaScript is not an object. A string has properties and methods but JavaScript just creates a temporary object to access them. This is called boxing (primitive value wrapped in an object)
 
 An **expression** in JavaScript is a piece of code that produces a value. 
-```
+
+```js
 console.log(1 + 2); 
 
 // 1 + 2 is an expression that produces the value 3
@@ -24,7 +25,7 @@ console.log(3);
 
 A **statement** in JavaScript is a piece of code that performs an action. It doesn't produce a value.
 
-```
+```js
 let x = 1 + 2;
 ```
 
@@ -38,11 +39,13 @@ let x = 1 + 2;
  - <a href="https://javascript.info/variables">Variables</a>
  - <strong>Note:</strong> <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20%26%20grammar/ch1.md#values-as-types">Values have types, not variables</a>.
  - Expressions:
+    - <a href="https://exploringjs.com/impatient-js/ch_syntax.html#statement-vs-expression">Expressions vs statement</a>
     - <a href="https://javascript.info/operators#maths">Math operators</a>
     - <strong>note:</strong> <a href ="https://www.youtube.com/watch?v=PZRI1IfStY0">Floating point math</a>
     - <a href="https://javascript.info/operators#assignment">Assignment operators</a>
     - <a href="https://javascript.info/logical-operators">Logical operators</a>
     - <a href="https://javascript.info/comparison">Comparison operators</a>
+
  - Extra Coding Practice:
    - <a href="https://exercism.org/tracks/javascript">Exercism</a>
    - <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript">FreeCodeCamp.org<a/>
