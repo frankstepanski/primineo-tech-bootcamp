@@ -1,5 +1,52 @@
 # Week 2
 
+### Equality
+
+In JavaScript, there are several kinds of equality.
+
+- **Strict equality** (`===`) checks if two values are the same type and have the same value.
+- **Loose equality** (`==`) checks if two values have the same value, but it will convert the values to the same type before comparing them.
+- **Object equality** (`Object.is`) checks if two values are the same type and have the same value. It is similar to strict equality, but it has some special cases.
+
+### Control flow
+
+Control flow is the order in which the computer executes statements in a script.
+
+#### If statement
+
+An `if` statement executes a statement if a specified condition is `true`. If the condition is `false`, another statement can be executed.
+
+```js
+if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}
+```
+
+### Iteration
+
+Iteration is the process of repeating a set of instructions until a certain condition is met.
+
+#### For loop
+
+A `for` loop repeats until a specified condition evaluates to `false`. 
+
+```js
+for ([initialExpression]; [conditionExpression]; [incrementExpression])
+  statement
+```
+
+#### While loop
+
+A `while` statement executes its statements as long as a specified condition evaluates to `true`. 
+
+```js
+while (condition)
+  statement
+```
+
+
  - <a href="https://exploringjs.com/impatient-js/ch_syntax.html#statement-vs-expression">Expressions vs statement</a>
  - Control flow:
    - <a href="https://javascript.info/comparison">Comparison operators</a>
