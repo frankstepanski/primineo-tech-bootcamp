@@ -9,7 +9,7 @@
     - [Structy](https://structy.net/)
     - [Neetcode](https://neetcode.io/courses/dsa-for-beginners/1) **not free**
     - [Algoexpert](https://www.algoexpert.io/product) **not free**
-    - Interview Camp](https://interviewcamp.io/courses/system-design) **not free**
+    - [Interview Camp](https://interviewcamp.io/courses/system-design) **not free**
     - [Algo Daily](https://algodaily.com/) **not free**
     - [Educative](https://www.educative.io/path/ace-javascript-coding-interview) **not free**
     - [Back to SWE](https://backtobackswe.com/) **not free**
