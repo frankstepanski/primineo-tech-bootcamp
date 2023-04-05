@@ -24,6 +24,7 @@
 
 - Frontend
     - [BigFrontEnd.dev](https://bigfrontend.dev/) 
+    - [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com/)
 
 - Mock Interviews
     - [Pramp](https://www.pramp.com/#/)
@@ -31,5 +32,5 @@
     - [Prepfully](https://prepfully.com/practice-interviews) **not free**
 
 - Continued Learning
-    - [Frontend Masters](https://frontendmasters.com/) **not free**
     - [App Academy Open Source Program](https://open.appacademy.io/)
+    - [Frontend Masters](https://frontendmasters.com/) **not free**
