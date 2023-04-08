@@ -2,7 +2,7 @@
 
 ### Classes
 
-Classes are a newer syntax that we can use as a blueprint to create objects.
+Classes is a syntax that we can use as a blueprint to create objects.
 
 We will use the `class` keyword to declare a new class. It's important to note that classes will start will capital letter.
 
