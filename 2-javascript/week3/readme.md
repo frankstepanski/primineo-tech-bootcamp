@@ -127,9 +127,6 @@ console.log(namesArr.length)
 //Prints 3 to the console
 ```
 
-> Note: You do not invoke length, as it is not a function but a property.
-
-
 ### Functions
 
 Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
