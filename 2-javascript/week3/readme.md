@@ -133,7 +133,7 @@ Functions are reusable pieces of code that we can use to execute code blocks whe
 
 Functions can be written using either a function declaration or an expression.
 
-A function declaration uses the following format:
+A function declaration:
 
 ```js
 function nameOfFunction() {
@@ -141,7 +141,7 @@ function nameOfFunction() {
 }
 ```
 
-A function expression uses this format:
+A function expression:
 
 ```js
 const nameOfFunction = function() {
