@@ -69,16 +69,16 @@ addTwo(5, 5) //Returns 10
 We use the `return` keyword to determine the value that is returned by the function. A function can return any data type, or even another function. When we invoke a function, it becomes equal to its return value and can be assigned to a variable. For example:
 
 ```js
-var a = addTwo(2, 2) //Our variable a is now equal to 4 and can be used later
-var b = addTwo(3, 3) //Variable b is now equal to 6
+let a = addTwo(2, 2) //Our variable a is now equal to 4 and can be used later
+let b = addTwo(3, 3) //Variable b is now equal to 6
 ```
 
 > The return keyword prevents any code below it from executing. It effectively kicks us out of our function. Make sure your return statement is the last thing you want to have happen in a function.
 
 
 ```js
-var name = 'Andrew'
-var name2 = 'Jonathan'
+let name = 'Andrew'
+let name2 = 'Jonathan'
 
 function sayHi(person) {
   return `Hello, ${person} !`
@@ -86,9 +86,9 @@ function sayHi(person) {
 
 //What will be the value of the following invocations?
 
-var hiAndrew = sayHi(name)
-var hiJonathan = sayHi(name2)
-var hiBob = sayHi('Bob')
+let hiAndrew = sayHi(name)
+let hiJonathan = sayHi(name2)
+let hiBob = sayHi('Bob')
 ```
 
 > Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
