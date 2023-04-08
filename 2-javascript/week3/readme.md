@@ -52,11 +52,9 @@ console.log(namesArr[index])
 
 #### Editing arrays
 
----
-
 Arrays have built in functions to easily edit their contents. They will all allow you to edit arrays as the data you are dealing with changes.
 
-All of these functions are invoked by chaining them onto an array variable in the following format: `array.function()`. Let's dive into them:
+All of these functions are invoked by chaining them onto an array variable in the following format: `array.function()`. 
 
 - `.push()` allows you to add an item to the end of an array.
 
