@@ -172,3 +172,14 @@ countTwo()
 countTwo()
 countTwo()
 ```
+
+Resources:
+
+- Classes:
+    - <a href="https://javascript.info/class">Syntax</a>
+    - <a href="https://www.freecodecamp.org/news/javascript-classes-how-they-work-with-use-case/">Architecting classes</a>
+    - <a href="https://javascript.info/class-inheritance">Class Inheritance</a>
+    - <a href="https://javascript.info/class">Deep Dive</a>  
+- Closures:
+    - <a href="https://dmitripavlutin.com/javascript-closure/">Overview</a>  
+     - <a href="https://www.youtube.com/watch?v=FZZPAWaWJpI">Deep Dive</a>
