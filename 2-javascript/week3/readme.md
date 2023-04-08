@@ -38,8 +38,6 @@ var nameOfFunction = function() {
 }
 ```
 
-> Note: You will learn the difference between the two later in the cohort.
-
 Functions are invoked by referencing the function name and pairing it with a pair of parentheses `()`. Think of these parentheses as the button you are pushing to invoke the function. For example, to invoke our above written function we would simply type:
 
 ```js
