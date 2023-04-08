@@ -245,7 +245,7 @@ There are several elements:
 2.  Our `consoleLogResult` function takes a callback and prints its result to the console
 3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
 
-> Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_. You will learn shortly about many built in higher order functions so it's good to know what that means.
+> Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_.
 
 ### Objects
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
