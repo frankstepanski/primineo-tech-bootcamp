@@ -18,8 +18,6 @@ For example: to access the string `brown` in the array `arrayOfStrings` I would 
 
 #### Accessing values in an array
 
----
-
 Values inside of arrays are accessed primarily using **bracket notation**. This allows us to reference a specific index, or location within an array. To do this, we use the following format: `array[index]`
 
 Arrays are zero indexed, meaning that the first index, or location, inside of an array is 0. For example:
