@@ -226,6 +226,143 @@ let hiBob = sayHi('Bob')
     `js person.hasPets = false`
     > Note: Numbers, Strings, Booleans, Undefined, and Null are referred to as primitive data types because they only contain one thing. Objects and Arrays are referred to as complex data types because they each contain many values.
 
+#### Accessing values on objects
+
+Values on objects can be accessed using either dot or bracket notation.
+
+- Dot notation is the most common way to access properties on an object. To access a value on an object, you reference `object.key`. An example:
+
+  ```js
+  const person = {
+    name: 'Andrew',
+    age: 27,
+    married: true,
+    friends: ['Jonathan', 'Josh', 'Brandon'],
+    favorites: {
+      food: 'Jambalaya',
+      car: 'Land Rover',
+      animal: 'Duck',
+    },
+  }
+
+  console.log(person.name)
+  //Prints 'Andrew' to the console
+
+  //If you have objects nested inside of objects, you can chain dot notation together
+  console.log(person.favorites.car)
+  //Prints 'Land Rover' to the console
+  ```
+
+- Bracket notation is useful when you need to dynamically access keys on an object. To access a value on an object you reference `object[key]`. For example:
+
+  ```js
+  const person = {
+    name: 'Andrew',
+    age: 27,
+    married: true,
+    friends: ['Jonathan', 'Josh', 'Brandon'],
+    favorites: {
+      food: 'Jambalaya',
+      car: 'Land Rover',
+      animal: 'Duck',
+    },
+  }
+
+  console.log(person['name'])
+  //Prints 'Andrew' to the console
+
+  const myKey = 'favorites'
+  console.log(person[myKey]['animal'])
+  //Prints 'Duck' to the console
+  ```
+
+> NOTE: When using bracket notation, you can either provide a string of the key name, or a variable.
+
+#### Adding keys to an object
+
+New key/value pairs can be added to existing objects using either dot or bracket notation.
+
+- Using dot notation:
+
+  ```js
+  const person = {
+    name: 'Andrew',
+    age: 27,
+    married: true,
+    friends: ['Jonathan', 'Josh', 'Brandon'],
+    favorites: {
+      food: 'Jambalaya',
+      car: 'Land Rover',
+      animal: 'Duck',
+    },
+  }
+
+  person.hasPets = false
+  //This will add a key of hasPets to the person object and give it a value of false.
+
+  //This works with nested objects as well.
+  person.favorites.place = 'St. Petersburg'
+  //This will add a place property to the nested favorites object and give it the value of 'St. Petersburg'
+
+  //Don't forget what we learned above,
+  //if there are arrays as properties on and object, the functions we learned apply.
+
+  person.friends.push('Charles')
+  //This will push the value 'Charles' onto the friends array on the person object.
+  //It is incredibly common to see data nested in this fashion, so you should become comfortable with seeing it
+  ```
+
+- Using bracket notation:
+
+  ```js
+  //This code will behave identically to the code above
+  const person = {
+    name: 'Andrew',
+    age: 27,
+    married: true,
+    friends: ['Jonathan', 'Josh', 'Brandon'],
+    favorites: {
+      food: 'Jambalaya',
+      car: 'Land Rover',
+      animal: 'Duck',
+    },
+  }
+
+  person['hasPets'] = false
+  //This will add a key of hasPets to the person object and give it a value of false.
+
+  //This works with nested objects as well.
+  person['favorites'].place = 'St. Petersburg'
+  //This will add a place property to the nested favorites object and give it the value of 'St. Petersburg'
+  //Notice you can combine bracket and dot notation
+
+  const myKey = 'friends'
+
+  person[myKey].push('Charles')
+  //This will push the value 'Charles' onto the friends array on the person object.
+  ```
+
+  #### Methods
+
+  Methods are functions that live on objects. We can create a method using a number of different syntax but the one that will look most familiar is using the `function` keyword. For example:
+
+  ```js
+  const person = {
+    name: 'Andrew',
+    age: 27,
+    friends: ['Jonathan', 'Josh', 'Brandon'],
+    sayHi: function() {
+      console.log('Hello, ' + person.name)
+    },
+    listFriends: function() {
+      console.log(person.friends)
+    },
+  }
+  ```
+
+  > In this example, we have attached two methods to our person object: `sayHi` and `listFriends`. We invoke methods by referencing their key using either dot or bracket notation, and using parentheses `()` to indicate we want to invoke the function. In this case, we could invoke `sayHi` by typing `person.sayHi()` which would print 'Hello, Andrew' to the console.
+ 
+
 Resources:
 - Arrays: 
   - <a href="https://www.youtube.com/watch?v=55l-aZ7_F24">Definition</a>
