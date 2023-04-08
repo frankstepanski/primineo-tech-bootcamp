@@ -1,21 +1,23 @@
 # Week 3
 
 ### Array
-  - Can be thought of as a list.
-  - An array can contain any data type or even a mix of data types.
-  - Contained witin brackets `[]` with each value separated by a comma.
-  - Example:
+
+Can be thought of as a list.
+
+An array can contain any data type or even a mix of data types.
+
+Contained witin brackets `[]` with each value separated by a comma.
+
+Example:
   ```js
   const arrayOfNumbers = [1, 2, 3, 4, 5]
   const arrayOfStrings = ['brown', 'purple', 'green', 'yellow']
   ```
-  - Values in an array are referenced using _bracket notation_.
-    - This means, to access a specific value in an array, we provide the following: `Array[index]`
-    - For example: to access the string `brown` in the array `arrayOfStrings` I would reference it as `arrayOfStrings[0]` because arrays are zero-indexed, meaning the first item in the array is located at index 0.
+
+Values in an array are referenced using _bracket notation_.  This means, to access a specific value in an array, we provide the following: `Array[index]`
+For example: to access the string `brown` in the array `arrayOfStrings` I would reference it as `arrayOfStrings[0]` because arrays are zero-indexed, meaning the first item in the array is located at index 0.
 
 ### Functions
-
----
 
 Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
 

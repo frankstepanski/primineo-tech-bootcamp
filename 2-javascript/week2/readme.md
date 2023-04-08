@@ -10,8 +10,6 @@ In JavaScript, there are several kinds of equality.
 
 ### Control flow
 
----
-
 Control flow is the order in which the computer executes statements in a script.
 
 #### If statement
