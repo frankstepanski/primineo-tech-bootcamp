@@ -241,8 +241,8 @@ consoleLogResult(() => return greeting('Andrew'))
 
 There are several elements:
 
-1.  Our `greeting` function takes a name and returns a greeting specific for that person
-2.  Our `consoleLogResult` function takes a callback and prints its result to the console
+1.  Our `greeting` function takes a name and returns a greeting specific for that person.
+2.  Our `consoleLogResult` function takes a callback and prints its result to the console.
 3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
 
 > Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_.
