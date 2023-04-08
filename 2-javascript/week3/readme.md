@@ -1,6 +1,6 @@
 # Week 3
 
-### Arrays
+### Array
   - Can be thought of as a list.
   - An array can contain any data type or even a mix of data types.
   - Contained witin brackets `[]` with each value separated by a comma.
