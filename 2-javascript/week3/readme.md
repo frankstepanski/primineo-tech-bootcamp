@@ -74,8 +74,7 @@ var b = addTwo(3, 3) //Variable b is now equal to 6
 ```
 
 > The return keyword prevents any code below it from executing. It effectively kicks us out of our function. Make sure your return statement is the last thing you want to have happen in a function.
->
-> A final example:
+
 
 ```js
 var name = 'Andrew'
