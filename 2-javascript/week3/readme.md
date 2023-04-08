@@ -16,5 +16,5 @@
     - <a href="https://www.w3schools.com/js/js_objects.asp">Quick summary</a>
     - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a>
     - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#enumerating_properties">Looping through objects</a>
-  - Additional Resources
+- Additional Resources
     - <a href="https://www.youtube.com/watch?v=nDPv8R2lFa4&t=692s">Deep Dive</a>
