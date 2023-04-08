@@ -81,9 +81,7 @@ var name = 'Andrew'
 var name2 = 'Jonathan'
 
 function sayHi(person) {
-  return 'Hello, ' + person + '!'
-  //We are joining multiple strings together into a larger string.
-  //This is known as concatenation
+  return `Hello, ${person} !`
 }
 
 //What will be the value of the following invocations?
