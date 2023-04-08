@@ -1,5 +1,40 @@
 # Week 3
 
+### Arrays
+  - Can be thought of as a list.
+  - An array can contain any data type or even a mix of data types.
+  - Contained witin brackets `[]` with each value separated by a comma.
+  - Example:
+  ```js
+  const arrayOfNumbers = [1, 2, 3, 4, 5]
+  const arrayOfStrings = ['brown', 'purple', 'green', 'yellow']
+  ```
+  - Values in an array are referenced using _bracket notation_.
+    - This means, to access a specific value in an array, we provide the following: `Array[index]`
+    - For example: to access the string `brown` in the array `arrayOfStrings` I would reference it as `arrayOfStrings[0]` because arrays are zero-indexed, meaning the first item in the array is located at index 0.
+
+### Object
+  - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
+  - Keys are also referred to as properties.
+  - Contained within a set of curly brackets `{}`,
+  - Keys are declared inside of an object by using a colon `:`.
+  - Each key value pair is separated by a comma `,`.
+  - Key value pairs can contain any data type.
+  - Objects are used to represent collections of data that go together, for example:
+    ```js
+    const person = {
+      name: 'Andrew',
+      age: 27,
+      married: true,
+      friends: ['Jonathan', 'Josh', 'Spencer'],
+    }
+    ```
+  - Values in objects are usually referenced using _dot notation_.
+    _ For example: to access the `name` property on the object `person`, I would reference it as `person.name` which would give me the string `'Andrew'`
+    _ New key value pairs can be added to an existing object using dot notation. For example, to add a `pets` property to our `person` object we can just say:
+    `js person.hasPets = false`
+    > Note: Numbers, Strings, Booleans, Undefined, and Null are referred to as primitive data types because they only contain one thing. Objects and Arrays are referred to as complex data types because they each contain many values.
+
 - Arrays: 
   - <a href="https://www.youtube.com/watch?v=55l-aZ7_F24">Definition</a>
   - <a href="https://javascript.info/array">Documentation</a>
