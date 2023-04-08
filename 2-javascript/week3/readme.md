@@ -55,8 +55,8 @@ function addTwo(num1, num2) {
 ```
 
 > This function will take in two numbers and return their sum. We do not know what the values for `num1` and `num2` will be for each invocation, so the parameters act as placeholders.
->
-> To invoke this function we could do the following:
+
+To invoke this function we could do the following:
 
 ```js
 addTwo(2, 2) //Returns 4
