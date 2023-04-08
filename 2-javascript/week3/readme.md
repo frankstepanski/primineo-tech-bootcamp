@@ -202,7 +202,7 @@ let hiJonathan = sayHi(name2)
 let hiBob = sayHi('Bob')
 ```
 
-> Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
+> Remember: Functions and if statements can also be nested inside of each other. 
 
 ### Callbacks
 
