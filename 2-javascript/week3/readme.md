@@ -16,6 +16,130 @@ Contained witin brackets `[]` with each value separated by a comma.
 Values in an array are referenced using _bracket notation_.  This means, to access a specific value in an array, we provide the following: `Array[index]`
 For example: to access the string `brown` in the array `arrayOfStrings` I would reference it as `arrayOfStrings[0]` because arrays are zero-indexed, meaning the first item in the array is located at index 0.
 
+#### Accessing values in an array
+
+---
+
+Values inside of arrays are accessed primarily using **bracket notation**. This allows us to reference a specific index, or location within an array. To do this, we use the following format: `array[index]`
+
+Arrays are zero indexed, meaning that the first index, or location, inside of an array is 0. For example:
+
+```js
+const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+> In this example `numArr[0]` is equal to 1 because 1 is the first item in the array. `numArr[5]` is equal to 6 because 6 is the 5th index on the array.
+>
+> This can be a confusing idea at first, but you will have plenty of practice accessing items in arrays.
+
+You can also access values on an array by passing in a variable. This can be useful if you don't know exactly which index you will need to access at different times. For example:
+
+```js
+const namesArr = ['Andrew', 'Jonathan', 'Josh', 'Brandon']
+
+const index = 0
+
+console.log(namesArr[index])
+//This will print 'Andrew' to the console.
+
+//However, if we change the value of index later in the file,
+//we can access another value.
+
+index = 2
+console.log(namesArr[index])
+//Because the value of index is now 2, this will print 'Josh' to the console
+```
+
+#### Editing arrays
+
+---
+
+Arrays have built in functions to easily edit their contents. They will all allow you to edit arrays as the data you are dealing with changes.
+
+All of these functions are invoked by chaining them onto an array variable in the following format: `array.function()`. Let's dive into them:
+
+- `.push()` allows you to add an item to the end of an array.
+
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh']
+  namesArr.push('Brandon')
+
+  //namesArr now looks like this: ['Andrew', 'Jonathan', 'Josh', 'Brandon']
+  ```
+
+- `.pop()` removes the last item from an array.
+
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh']
+  const finalName = namesArr.pop()
+
+  //namesArr now looks like this: ['Andrew', 'Jonathan']
+  //.pop can be assigned to a variable which will be the item removed.
+  //In this example finalName is now equal to 'Josh'
+  ```
+
+- `.shift()` removes the first item from an array.
+
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh']
+  const firstName = namesArr.shift()
+
+  //namesArr now looks like this: ['Jonathan', 'Josh']
+  //Similar to .pop, .shift can be assigned to a variable.
+  //firstName will be equal to 'Andrew'
+  ```
+
+- `.unshift()` allows you to add an item to the front of an array.
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh']
+  namesArr.push('Brandon')
+  //namesArr now looks like this: ['Brandon', 'Andrew', 'Jonathan', 'Josh']
+  ```
+- `.slice()` makes a shallow copy of the array that it's chained on to. It takes two arguments, the starting and ending indices of the array you want to copy.
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh']
+  const someNames = namesArr.slice(0, 1)
+  //someNames now looks like this: ['Andrew', 'Jonathan']
+  ```
+  > Note: this does not change the original array.
+- `.splice()` is the most dynamic of all for editing arrays. It takes 3 arguments:
+
+  1.  The index at which we want to begin editing
+  2.  How many items to remove from the array
+  3.  Any values to replace at that index
+
+  ```js
+  const namesArr = ['Andrew', 'Jonathan', 'Josh', 'Brandon', 'Steve']
+  const removedName = namesArr.splice(1, 1)
+  //This will remove 1 name from the array at index 1 and assign it to the variable removedName
+  //namesArr now looks like this: ['Andrew', 'Josh', 'Brandon', 'Steve']
+  //removedName is equal to 'Jonathan'
+
+  //We can continue to edit it, and even put new values in
+  namesArr.splice(1, 0, 'Charles')
+  //This will just insert charles at index 1.
+  //namesArr will now look like this: ['Andrew', 'Charles', 'Josh', 'Brandon', 'Steve']
+  ```
+
+  > .splice() is incredibly dynamic and will be one of the most useful functions you can learn. It would be worth your time to play around with it in a repl or other project to increase your familiarity with what it can do.
+
+#### .length
+
+---
+
+All arrays have a length property by default. As the name would suggest this returns the length of the array. Remember that while arrays are zero indexed, length is not. For example:
+
+```js
+const namesArr = ['Andrew', 'Jonathan', 'Josh']
+console.log(namesArr.length)
+//Prints 3 to the console
+```
+
+> Note: You do not invoke length, as it is not a function but a property.
+>
+> Trick: You can use .length to dynamically access the last index in an array. If we wanted the last item in our `namesArr` array but didn't know its index, we could reference it like this: `namesArr[namesArr.length - 1]`. This is a good trick to know.
+
+
 ### Functions
 
 Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
