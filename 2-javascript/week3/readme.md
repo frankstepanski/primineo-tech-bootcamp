@@ -33,7 +33,7 @@ function nameOfFunction() {
 A function expression uses this format:
 
 ```js
-var nameOfFunction = function() {
+const nameOfFunction = function() {
   //Code to execute
 }
 ```
@@ -81,7 +81,7 @@ let name = 'Andrew'
 let name2 = 'Jonathan'
 
 function sayHi(person) {
-  return `Hello, ${person} !`
+  return `Hello, ${person}!`
 }
 
 //What will be the value of the following invocations?
@@ -102,10 +102,10 @@ let hiBob = sayHi('Bob')
 Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. For example:
 
 ```js
-var name = 'Andrew'
+let name = 'Andrew'
 
 function sayHi(person) {
-  var greeting = 'Hello, ' + person + '!'
+  let greeting = `Hello, ${person}!`
   return greeting
 }
 ```
