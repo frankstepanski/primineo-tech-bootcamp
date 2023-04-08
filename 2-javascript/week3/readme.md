@@ -206,7 +206,7 @@ let hiBob = sayHi('Bob')
 
 ### Callbacks
 
-A callback is a function that is passed as an argument to another function. This is a very common pattern that you should become familiar with. 
+A callback is a function that is passed as an argument to another function.
 
 ```js
 function callback() {
