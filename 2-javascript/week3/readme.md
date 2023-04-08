@@ -249,12 +249,12 @@ There are several elements:
 
 ### Objects
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
-  - Keys are also referred to as properties.
-  - Contained within a set of curly brackets `{}`,
-  - Keys are declared inside of an object by using a colon `:`.
-  - Each key value pair is separated by a comma `,`.
-  - Key value pairs can contain any data type.
-  - Objects are used to represent collections of data that go together, for example:
+  - Keys are also referred to as properties
+  - Contained within a set of curly brackets `{}`
+  - Keys are declared inside of an object by using a colon `:`
+  - Each key value pair is separated by a comma `,`
+  - Key value pairs can contain any data type
+
     ```js
     const person = {
       name: 'Andrew',
