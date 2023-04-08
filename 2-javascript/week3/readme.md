@@ -20,17 +20,15 @@ For example: to access the string `brown` in the array `arrayOfStrings` I would 
 
 Values inside of arrays are accessed primarily using **bracket notation**. This allows us to reference a specific index, or location within an array. To do this, we use the following format: `array[index]`
 
-Arrays are zero indexed, meaning that the first index, or location, inside of an array is 0. For example:
+Arrays are zero indexed, meaning that the first index, or location, inside of an array is 0. 
 
 ```js
 const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 > In this example `numArr[0]` is equal to 1 because 1 is the first item in the array. `numArr[5]` is equal to 6 because 6 is the 5th index on the array.
->
-> This can be a confusing idea at first, but you will have plenty of practice accessing items in arrays.
 
-You can also access values on an array by passing in a variable. This can be useful if you don't know exactly which index you will need to access at different times. For example:
+You can also access values on an array by passing in a variable. This can be useful if you don't know exactly which index you will need to access at different times.
 
 ```js
 const namesArr = ['Andrew', 'Jonathan', 'Josh', 'Brandon']
@@ -121,9 +119,7 @@ All of these functions are invoked by chaining them onto an array variable in th
 
 #### .length
 
----
-
-All arrays have a length property by default. As the name would suggest this returns the length of the array. Remember that while arrays are zero indexed, length is not. For example:
+All arrays have a length property by default. As the name would suggest this returns the length of the array. Remember that while arrays are zero indexed, length is not. 
 
 ```js
 const namesArr = ['Andrew', 'Jonathan', 'Josh']
@@ -132,8 +128,6 @@ console.log(namesArr.length)
 ```
 
 > Note: You do not invoke length, as it is not a function but a property.
->
-> Trick: You can use .length to dynamically access the last index in an array. If we wanted the last item in our `namesArr` array but didn't know its index, we could reference it like this: `namesArr[namesArr.length - 1]`. This is a good trick to know.
 
 
 ### Functions
