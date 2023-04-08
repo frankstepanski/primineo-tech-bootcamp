@@ -1,6 +1,6 @@
 # Week 3
 
-### Array
+### Arrays
 
 Can be thought of as a list.
 
@@ -93,7 +93,7 @@ let hiBob = sayHi('Bob')
 
 > Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
 
-### Object
+### Objects
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
   - Keys are also referred to as properties.
   - Contained within a set of curly brackets `{}`,
