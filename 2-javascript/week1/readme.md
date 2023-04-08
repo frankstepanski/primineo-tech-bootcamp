@@ -29,7 +29,7 @@ A **statement** in JavaScript is a piece of code that performs an action. It doe
 let x = 1 + 2;
 ```
 
-
+Resources:
  - <a href="https://www.codecademy.com/article/what-is-programming">What is Programming?</a> 
  - <a href="https://javascript.info/hello-world#the-script-tag">The "script" tag - embedding JavaScript in the browser</a>
  - <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
@@ -49,7 +49,8 @@ let x = 1 + 2;
  - Extra Coding Practice:
    - <a href="https://exercism.org/tracks/javascript">Exercism</a>
    - <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript">FreeCodeCamp.org<a/>
- - Additional Resources:
+   
+ - Additional:
    - <a href="https://roadmap.sh/frontend">Frontend Roadmap</a>
    - <a href="https://javascript.info/">JavaScript.Info</a>
    - <a href="https://www.w3schools.com/js/default.asp">W3Schools.com</a>

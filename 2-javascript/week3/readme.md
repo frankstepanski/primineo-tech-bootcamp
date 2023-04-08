@@ -115,6 +115,7 @@ let hiBob = sayHi('Bob')
     `js person.hasPets = false`
     > Note: Numbers, Strings, Booleans, Undefined, and Null are referred to as primitive data types because they only contain one thing. Objects and Arrays are referred to as complex data types because they each contain many values.
 
+Resources:
 - Arrays: 
   - <a href="https://www.youtube.com/watch?v=55l-aZ7_F24">Definition</a>
   - <a href="https://javascript.info/array">Documentation</a>

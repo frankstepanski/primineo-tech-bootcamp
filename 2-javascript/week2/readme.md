@@ -46,6 +46,7 @@ while (condition)
   statement
 ```
 
+Resources:
  - Control flow:
    - <a href="https://javascript.info/comparison">Comparison operators</a>
    - <a href="https://javascript.info/logical-operators">Logical operators</a>
