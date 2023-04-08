@@ -127,6 +127,161 @@ console.log(namesArr.length)
 //Prints 3 to the console
 ```
 
+### Array Methods
+
+A method is a function which lives on an object. 
+
+These particular functions operate much like a `for` loop because they loop over the specified array similar to how you can use a `for` loop. The methods accept oneat least one argument, a callback function.
+
+> Note: These array methods are called higher order functions because they
+take as an argument a callback function.
+
+#### .forEach
+
+The .forEach array method loops over the array and performs an action for each item in the array without returning a new array. This can be useful for performing an action a set number of times or editing the values in the original array. 
+
+The .forEach callback function will loop over the given array in a way very similar to a for loop can and accepts three arguments:
+
+1. The individual item it is looking at, often referred to as `element` or `el`.
+2. The index of the item being looked at.
+3. The entire original array.
+
+```js
+const names = ['Andrew', 'Jonathan', 'Josh']
+//If we simply wanted to print each of these names to the console, we could do this:
+
+names.forEach(function(element, index, array) {
+  console.log(element)
+})
+
+//However, the usefulness of this is limited.  Let's imagine we wanted to find out who was cool, but didn't need a new array.
+
+names.forEach(function(element, index, array) {
+  if (element === 'Andrew') {
+    names[index] = element + ' is cool.'
+  } else {
+    names[index] = element + ' is not cool.'
+  }
+})
+
+//names now looks like this:
+//['Andrew is cool', 'Jonathan is not cool', 'Josh is not cool']
+```
+
+#### .map
+
+The .map method behaves very similarly to .forEach and its callback function even takes the same arguments (element, index, and array) - the major difference being that it is used to create a new array instead of simply performing an action for each item in the array. The .map method returns a new array of the same length as the original array and generally will change some aspect of the values in the original array.
+
+```js
+const nums = [1, 2, 3, 4, 5]
+
+const numsPlusOne = nums.map(function(element, index, array) {
+  //.map loops over the nums array and looks at each item
+  //On the first run element = 1, index = 0, and array = [1,2,3,4,5]
+  //On the second run element = 2, index = 1, and array = [1,2,3,4,5]
+  //element and index are placeholder values for each element and index in the array
+  return element + 1
+  //Our return value is what will be added to the new array, meaning in this case we will add each number + 1
+})
+
+//numsPlusOne is equal to [2,3,4,5,6]
+//The original nums array has not been changed
+```
+
+```js
+const names = ['Andrew', 'Jonathan', 'Josh']
+
+const whoIsCool = names.map(function(element, index, array) {
+  if (element === 'Andrew') {
+    return element + ' is super cool.'
+  } else {
+    return element + ' is not cool.'
+  }
+})
+
+//After this runs, whoIsCool will look like this:
+//['Andrew is super cool', 'Jonathan is not cool', 'Josh is not cool']
+```
+
+Notes:
+
+1.  Since .map does not affect the original array, it **always** needs to be assigned to a new variable.
+2.  The array returned by .map will **always** be the same length as the original array. If you do not provide a valid return as part of your callback function, that element will be `undefined`.
+3.  You do not have to provide all 3 arguments to your callback function. If you only need the element, that's all you have to pass to the callback function. Just remember that the first argument passed is the element, the second is the index, and the third is the array, regardless of what you name each of them.
+
+#### .filter
+
+True to its name, .filter allows us to filter items out of an array based on a set condition. It's callback function accepts the same arguments as .map and .forEach but is explicitly looking for either a `true` or `false` value to be returned. If the callback function returns `true`, that element will be added to the new array, otherwise it will be ignored. 
+
+```js
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//Imagine we only want the even numbers from this array
+
+const evens = nums.filter(function(element, index, array) {
+  if (element % 2 === 0) {
+    return true
+  }
+})
+```
+
+ Notes:
+
+1.  In this example uses the modulus operator `%` which will return the remainder of the division. If we divide by two and the remainder is 0, we know it's an even number.
+2.  Filter always returns a new array and therefore needs to be assigned to a variable
+
+#### .reduce
+
+.reduce allows us to take many values and reduce them down to a single value. It is slightly different from the others we have looked at today because it takes in two arguments, a callback function and an initializer. The initializer is important because it tells .reduce what data type we are expecting to return from the function. If no initializer is provided, the first item in the array will be used as the initial starting value in the function. 
+
+Furthermore, the callback function accepts one extra argument, the accumulator. The accumulator is used to keep track of our value as we loop through the array. The simplest functionality of .reduce is to sum an array of numbers but the possibilities are endless. 
+
+```js
+const nums = [1, 2, 3, 4, 5]
+
+const sumNums = nums.reduce(function(acc, element, index, array) {
+  return (acc += element)
+}, 0)
+```
+
+Let's look at what our values will look like for each loop:
+
+1. On the first run:
+
+- the `acc` is equal to the initializer, `0`
+- `element` is the first item in the array, `1`
+- We `return 0 + 1`, so `acc` becomes `1` for the next loop.
+
+2. On the second loop:
+
+- `acc` is equal to `1`, `element` is equal to `2`
+- We `return 1 + 2`, so `acc` becomes `3`
+
+3. Once all of the loops have completed, the final value of `acc` is assigned to `sumNums`
+
+- If we console log `sumNums`, we will see `21`.
+
+This is a very basic example, but let's look at something a little more fun:
+
+```js
+const names = ['Jonathan', 'Josh', 'Brandon']
+
+const andrewsFriends = names.reduce(function(acc, element, index, array) {
+  if (index === names.length - 1) {
+    return acc + 'and ' + element
+  } else {
+    return acc + element + ', '
+  }
+}, "Andrew's friends are ")
+```
+
+In this example, our initializer is the beginning of a string `"Andrew's friends are "`. With each loop, we are pulling a name from the names array and adding it to this string. Once we hit the last item (where `index` is equal to the length of the array minus one) we finish off the string with `'and'`. Again, this is a silly example but shows some of the power that .reduce has.
+
+Notes:
+
+1.  Reduce always returns a new value and therefore needs to be assigned to a variable.
+2.  When beginning to write .reduce functions, it can be easy to forget either the accumulator or the initializer. Remember, whatever the first argument you pass to the callback function will be the accumulator, regardless of what you name it.
+
+
 ### Functions
 
 Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
@@ -383,27 +538,6 @@ New key/value pairs can be added to existing objects using either dot or bracket
   person[myKey].push('Charles')
   //This will push the value 'Charles' onto the friends array on the person object.
   ```
-
-  #### Methods
-
-  Methods are functions that live on objects. We can create a method using a number of different syntax but the one that will look most familiar is using the `function` keyword. For example:
-
-  ```js
-  const person = {
-    name: 'Andrew',
-    age: 27,
-    friends: ['Jonathan', 'Josh', 'Brandon'],
-    sayHi: function() {
-      console.log('Hello, ' + person.name)
-    },
-    listFriends: function() {
-      console.log(person.friends)
-    },
-  }
-  ```
-
-  > In this example, we have attached two methods to our person object: `sayHi` and `listFriends`. We invoke methods by referencing their key using either dot or bracket notation, and using parentheses `()` to indicate we want to invoke the function. In this case, we could invoke `sayHi` by typing `person.sayHi()` which would print 'Hello, Andrew' to the console.
- 
 
 Resources:
 - Template literals: 
