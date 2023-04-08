@@ -13,6 +13,111 @@
     - This means, to access a specific value in an array, we provide the following: `Array[index]`
     - For example: to access the string `brown` in the array `arrayOfStrings` I would reference it as `arrayOfStrings[0]` because arrays are zero-indexed, meaning the first item in the array is located at index 0.
 
+### Functions
+
+---
+
+Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
+
+Functions can be written using either a function declaration or an expression.
+
+A function declaration uses the following format:
+
+```js
+function nameOfFunction() {
+  //Code to execute
+}
+```
+
+A function expression uses this format:
+
+```js
+var nameOfFunction = function() {
+  //Code to execute
+}
+```
+
+> Note: You will learn the difference between the two later in the cohort.
+
+Functions are invoked by referencing the function name and pairing it with a pair of parentheses `()`. Think of these parentheses as the button you are pushing to invoke the function. For example, to invoke our above written function we would simply type:
+
+```js
+nameOfFunction()
+```
+
+> This would invoke the function and execute any code we have written inside of it.
+
+Functions can be set up to receive parameters, or values that will change depending on when the function is invoked. For example, to write a simple function that will add two numbers together we can do the following:
+
+```js
+function addTwo(num1, num2) {
+  return num1 + num2
+}
+```
+
+> This function will take in two numbers and return their sum. We do not know what the values for `num1` and `num2` will be for each invocation, so the parameters act as placeholders.
+>
+> To invoke this function we could do the following:
+
+```js
+addTwo(2, 2) //Returns 4
+addTwo(3, 3) //Returns 6
+addTwo(5, 5) //Returns 10
+```
+
+> This is how we make our functions reusable. When you invoke a function, the values passed to it are called arguments, they are used in the function in place of parameters.
+
+We use the `return` keyword to determine the value that is returned by the function. A function can return any data type, or even another function. When we invoke a function, it becomes equal to its return value and can be assigned to a variable. For example:
+
+```js
+var a = addTwo(2, 2) //Our variable a is now equal to 4 and can be used later
+var b = addTwo(3, 3) //Variable b is now equal to 6
+```
+
+> The return keyword prevents any code below it from executing. It effectively kicks us out of our function. Make sure your return statement is the last thing you want to have happen in a function.
+>
+> A final example:
+
+```js
+var name = 'Andrew'
+var name2 = 'Jonathan'
+
+function sayHi(person) {
+  return 'Hello, ' + person + '!'
+  //We are joining multiple strings together into a larger string.
+  //This is known as concatenation
+}
+
+//What will be the value of the following invocations?
+
+var hiAndrew = sayHi(name)
+var hiJonathan = sayHi(name2)
+var hiBob = sayHi('Bob')
+```
+
+> Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
+
+### Scope and Let
+
+#### Scope
+
+---
+
+Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. For example:
+
+```js
+var name = 'Andrew'
+
+function sayHi(person) {
+  var greeting = 'Hello, ' + person + '!'
+  return greeting
+}
+```
+
+> In this example, the function `sayHi` is able to use the variable `name` because it is part of the **global scope**. Any variable that is declared in the global scope is available anywhere in our file.
+>
+> However, if we attempted to access our `greeting` variable outside of the function `sayHi`, we would be unable to do so because when we create a new code block, we create a new scope. We are able to look up into more general scopes, but not able to look down into more specific scopes.
+
 ### Object
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
   - Keys are also referred to as properties.
