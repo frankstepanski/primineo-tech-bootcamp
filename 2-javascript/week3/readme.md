@@ -93,27 +93,6 @@ let hiBob = sayHi('Bob')
 
 > Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
 
-### Scope and Let
-
-#### Scope
-
----
-
-Scope is an incredibly important topic in Javascript because it determines what has access to the variables we delcare. The rule of thumb is that code blocks are able to look up in scope but not down. For example:
-
-```js
-let name = 'Andrew'
-
-function sayHi(person) {
-  let greeting = `Hello, ${person}!`
-  return greeting
-}
-```
-
-> In this example, the function `sayHi` is able to use the variable `name` because it is part of the **global scope**. Any variable that is declared in the global scope is available anywhere in our file.
->
-> However, if we attempted to access our `greeting` variable outside of the function `sayHi`, we would be unable to do so because when we create a new code block, we create a new scope. We are able to look up into more general scopes, but not able to look down into more specific scopes.
-
 ### Object
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
   - Keys are also referred to as properties.
