@@ -26,7 +26,7 @@ Arrays are zero indexed, meaning that the first index, or location, inside of an
 const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-> In this example `numArr[0]` is equal to 1 because 1 is the first item in the array. `numArr[5]` is equal to 6 because 6 is the 5th index on the array.
+> `numArr[0]` is equal to 1 because 1 is the first item in the array. `numArr[5]` is equal to 6 because 6 is the 5th index on the array.
 
 You can also access values on an array by passing in a variable. This can be useful if you don't know exactly which index you will need to access at different times.
 
