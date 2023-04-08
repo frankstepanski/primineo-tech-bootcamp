@@ -406,6 +406,9 @@ New key/value pairs can be added to existing objects using either dot or bracket
  
 
 Resources:
+- Template literals: 
+  - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">Definition</a>
+  - <a href="https://www.w3schools.com/js/js_string_templates.asp">Examples</a>
 - Arrays: 
   - <a href="https://www.youtube.com/watch?v=55l-aZ7_F24">Definition</a>
   - <a href="https://javascript.info/array">Documentation</a>
