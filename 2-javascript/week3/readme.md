@@ -204,6 +204,49 @@ let hiBob = sayHi('Bob')
 
 > Remember: Functions and if statements can also be nested inside of each other. The possibilities are endless!
 
+### Callbacks
+
+A callback is a function that is passed as an argument to another function. This is a very common pattern that you should become familiar with. Let's look at an example:
+
+```js
+function callback() {
+  console.log('I am a callback')
+}
+//Our initial function
+
+function cbRunner(cb) {
+  //Notice, cbRunner takes in a callback function as its parameter
+  //it then invokes that function
+  cb()
+}
+
+cbRunner(callback)
+//Prints 'I am a callback' to the console
+```
+
+> This is obviously a very primitive example but does a good job at illustrating the callback pattern. Let's look at an example that could actually be used:
+
+```js
+function greeting(name){
+  return 'Hello, ' + name
+}
+
+function consoleLogResult(cb){
+  console.log(cb())
+}
+
+consoleLogResult(() => return greeting('Andrew'))
+//Prints 'Hello, Andrew' to the console
+```
+
+> This example is a little more complex and uses some syntax you may not yet be familiar with, so let's break it down. There are several elements:
+>
+> 1.  Our `greeting` function takes a name and returns a greeting specific for that person
+> 2.  Our `consoleLogResult` function takes a callback and prints its result to the console
+> 3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
+>
+> Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_. You will learn shortly about many built in higher order functions so it's good to know what that means.
+
 ### Objects
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
   - Keys are also referred to as properties.
