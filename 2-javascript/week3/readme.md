@@ -206,7 +206,7 @@ let hiBob = sayHi('Bob')
 
 ### Callbacks
 
-A callback is a function that is passed as an argument to another function. This is a very common pattern that you should become familiar with. Let's look at an example:
+A callback is a function that is passed as an argument to another function. This is a very common pattern that you should become familiar with. 
 
 ```js
 function callback() {
@@ -224,7 +224,7 @@ cbRunner(callback)
 //Prints 'I am a callback' to the console
 ```
 
-> This is obviously a very primitive example but does a good job at illustrating the callback pattern. Let's look at an example that could actually be used:
+> This is obviously a very primitive example but does a good job at illustrating the callback pattern. 
 
 ```js
 function greeting(name){
@@ -239,12 +239,12 @@ consoleLogResult(() => return greeting('Andrew'))
 //Prints 'Hello, Andrew' to the console
 ```
 
-> This example is a little more complex and uses some syntax you may not yet be familiar with, so let's break it down. There are several elements:
->
-> 1.  Our `greeting` function takes a name and returns a greeting specific for that person
-> 2.  Our `consoleLogResult` function takes a callback and prints its result to the console
-> 3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
->
+There are several elements:
+
+1.  Our `greeting` function takes a name and returns a greeting specific for that person
+2.  Our `consoleLogResult` function takes a callback and prints its result to the console
+3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
+
 > Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_. You will learn shortly about many built in higher order functions so it's good to know what that means.
 
 ### Objects
