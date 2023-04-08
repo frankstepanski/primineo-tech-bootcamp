@@ -8,7 +8,6 @@ An array can contain any data type or even a mix of data types.
 
 Contained witin brackets `[]` with each value separated by a comma.
 
-Example:
   ```js
   const arrayOfNumbers = [1, 2, 3, 4, 5]
   const arrayOfStrings = ['brown', 'purple', 'green', 'yellow']
