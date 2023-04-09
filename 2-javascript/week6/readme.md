@@ -130,3 +130,9 @@ describe('Bank account methods and properties', () => {
   })
 })
 ```
+
+Resources:
+
+- <a href="https://jestjs.io/docs/getting-started">Getting Started docs</a>
+- <a href="https://www.youtube.com/watch?v=7r4xVDI2vho&t=583s">Crash Course</a>
+- <a href="https://www.smashingmagazine.com/2020/06/practical-guide-testing-react-applications-jest/">Types of Testing with Jest</a>
