@@ -13,7 +13,7 @@ The idea is that we determine from the start what we expect a function or a comp
 
 Traditionally, testing is handled by QA engineers but there is a trend emerging of test driven development:
 
-![Test driven development](tdd.jpeg)
+![Test driven development](images/tdd.jpeg)
 
 There is a huge need for developers who know how to test their code and the more familiar you become with it, the more valuable you will be to a future employer. 
 
