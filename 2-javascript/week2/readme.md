@@ -48,11 +48,8 @@ while (condition)
 
 Resources:
  - Control flow:
-   - <a href="https://javascript.info/comparison">Comparison operators</a>
-   - <a href="https://javascript.info/logical-operators">Logical operators</a>
    - <a href= "https://dorey.github.io/JavaScript-Equality-Table/unified/">Equality in JavaScript</a>
    - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">truthy</a> vs <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>
-   - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion">Type coercion</a>
    - <a href="https://javascript.info/ifelse">if statements</a>
   - Loops (iteration)
     - <a href="https://www.youtube.com/watch?v=wxds6MAtUQ0">what is a loop?</a>
