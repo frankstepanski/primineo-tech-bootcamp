@@ -260,8 +260,6 @@ Let's look at what our values will look like for each loop:
 
 - If we console log `sumNums`, we will see `21`.
 
-This is a very basic example, but let's look at something a little more fun:
-
 ```js
 const names = ['Jonathan', 'Josh', 'Brandon']
 
@@ -274,7 +272,7 @@ const andrewsFriends = names.reduce(function(acc, element, index, array) {
 }, "Andrew's friends are ")
 ```
 
-In this example, our initializer is the beginning of a string `"Andrew's friends are "`. With each loop, we are pulling a name from the names array and adding it to this string. Once we hit the last item (where `index` is equal to the length of the array minus one) we finish off the string with `'and'`. Again, this is a silly example but shows some of the power that .reduce has.
+In this example, our initializer is the beginning of a string `"Andrew's friends are "`. With each loop, we are pulling a name from the names array and adding it to this string. Once we hit the last item (where `index` is equal to the length of the array minus one) we finish off the string with `'and'`. 
 
 Notes:
 
