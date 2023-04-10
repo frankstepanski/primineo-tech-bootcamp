@@ -55,7 +55,7 @@ The steps would be:
  2. You will then get prompted to choose an environment. Select Node.js, and VSCode will run your code.
  3. Below your code, a new pane called the Debug Console will open. 
  
- ### Setting breakpoints
+ #### Setting breakpoints
 
  Hold your pointer to the left of each line number, you will see a faded red dot. Click that dot to create a breakpoint, which is a signal that you place in your code to tell the debugger to stop the execution of your code. 
 
