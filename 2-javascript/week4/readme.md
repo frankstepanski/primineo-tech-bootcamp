@@ -4,11 +4,75 @@
 
 JavaScript is synchronous in nature. This means JavaScript runs code in the sequence they’re written.
 
-Asynchronous code will not be executed immediately. They will only be executed after a certain event occurs.
+Synchronous code will block further execution until it has finished what it's doing. As a result, a long-running JavaScript function will make the web app or server unresponsive until the function has finished. This can result in a terrible user experience.
 
-The common definition usually requires sending a request to a server and waiting for a response to come back. When Asynchronous Javascript was first talked about they referred to it as AJAX.
+To solve this, JavaScript makes certain operations asynchronous. This way, the web app or server is responsive while waiting for long-running tasks to complete.
 
-This was because the responses would come back in an XML form (due to the SOAP protocol). The term AJAX is outdated and inaccurate since we don’t use XML anymore, but that doesn’t prevent people from misusing the term.
+When asynchronous Javascript was first talked about they referred to it as AJAX.  This was because the responses would come back in an XML form. The term AJAX is outdated and inaccurate since we don’t use XML anymore, but that doesn’t prevent people from misusing the term.
+
+Nowadays the concept of asychronous coding is talked about in the same conversation as callbacks, promises and fetching data via REST APIs. 
+
+>These topics are too many for one lesson, so an overview of how aynchronous code and promises are created will be discussed for now.
+
+But first here is an example of what asynchronous code would be:
+
+```js
+function useSetTimeout() {
+  console.log("Start!");
+
+  setTimeout(() => {
+    console.log("Inside setTimeout!");
+  }, 1000);
+
+  console.log("End!");
+}
+
+useSetTimeout();
+```
+
+Despite the fact that the setTimeout() function is invoked immediately, the callback function isn't invoked until later. That means that the setTimeout() function is an asynchronous operation. 
+
+Let's look at another code example:
+
+```js
+function useSetTimeout() {
+  console.log("Start!");
+
+  setTimeout(() => {
+    console.log("Inside setTimeout!");
+  }, 0);
+
+  console.log("End!");
+}
+
+useSetTimeout();
+```
+
+Notice that the setTimeout() function was told to wait for 0 milliseconds. Why is "End!" still printed before "Inside setTimeout!"?
+
+The reason has to do with something called the **event loop**. The event loop is a process by which JavaScript prioritizes certain lines of code for execution. Asynchronous code is placed into a queue where it will always run after the synchronous lines of code. 
+
+ When JavaScript is being interpreted, asynchronous operations are not executed immediately. Instead, they are placed into an event queue and executed later. Those operations will be run as soon as they can which is after the synchronous code has been run.
+
+ Let's look at one final example:
+
+ ```js
+ console.log("Start!"); // Synchronous code
+
+setTimeout(() => {
+  console.log("Inside first setTimeout!"); // Asynchronous code
+}, 0);
+
+setTimeout(() => {
+  console.log("Inside second setTimeout!"); // Asynchronous code
+}, 0);
+
+console.log("End!"); // Synchronous code
+ ```
+
+When setTimeout() is invoked, it doesn't execute the callback immediately. Instead, a new event is placed on the event queue along with the callback passed to setTimeout(). 
+
+After the current file is done executing, the events in the queue are executed in order from oldest to newest (or first-in, first-out). As a result, the callback function passed into setTimeout() will always run after the synchronous code in the current file.
 
 ### Fetching Resources
 
