@@ -74,9 +74,7 @@ function sayHi(person) {
 let hiAndrew = sayHi(name)
 let hiJonathan = sayHi(name2)
 let hiBob = sayHi('Bob')
-```
-
-> Remember: Functions and if statements can also be nested inside of each other. 
+``` 
 
 ### Callbacks
 
