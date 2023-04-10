@@ -1,5 +1,126 @@
 # Week 3
 
+
+### Functions
+
+Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
+
+Functions can be written using either a function declaration or an expression.
+
+A function declaration:
+
+```js
+function nameOfFunction() {
+  //Code to execute
+}
+```
+
+A function expression:
+
+```js
+const nameOfFunction = function() {
+  //Code to execute
+}
+```
+
+Functions are invoked by referencing the function name and pairing it with a pair of parentheses `()`. Think of these parentheses as the button you are pushing to invoke the function. For example, to invoke our above written function we would simply type:
+
+```js
+nameOfFunction()
+```
+
+> This would invoke the function and execute any code we have written inside of it.
+
+Functions can be set up to receive parameters, or values that will change depending on when the function is invoked. For example, to write a simple function that will add two numbers together we can do the following:
+
+```js
+function addTwo(num1, num2) {
+  return num1 + num2
+}
+```
+
+> This function will take in two numbers and return their sum. We do not know what the values for `num1` and `num2` will be for each invocation, so the parameters act as placeholders.
+
+To invoke this function we could do the following:
+
+```js
+addTwo(2, 2) //Returns 4
+addTwo(3, 3) //Returns 6
+addTwo(5, 5) //Returns 10
+```
+
+> This is how we make our functions reusable. When you invoke a function, the values passed to it are called arguments, they are used in the function in place of parameters.
+
+We use the `return` keyword to determine the value that is returned by the function. A function can return any data type, or even another function. When we invoke a function, it becomes equal to its return value and can be assigned to a variable. For example:
+
+```js
+let a = addTwo(2, 2) //Our variable a is now equal to 4 and can be used later
+let b = addTwo(3, 3) //Variable b is now equal to 6
+```
+
+> The return keyword prevents any code below it from executing. It effectively kicks us out of our function. Make sure your return statement is the last thing you want to have happen in a function.
+
+
+```js
+let name = 'Andrew'
+let name2 = 'Jonathan'
+
+function sayHi(person) {
+  return `Hello, ${person}!`
+}
+
+//What will be the value of the following invocations?
+
+let hiAndrew = sayHi(name)
+let hiJonathan = sayHi(name2)
+let hiBob = sayHi('Bob')
+```
+
+> Remember: Functions and if statements can also be nested inside of each other. 
+
+### Callbacks
+
+A callback is a function that is passed as an argument to another function.
+
+```js
+function callback() {
+  console.log('I am a callback')
+}
+//Our initial function
+
+function cbRunner(cb) {
+  //Notice, cbRunner takes in a callback function as its parameter
+  //it then invokes that function
+  cb()
+}
+
+cbRunner(callback)
+//Prints 'I am a callback' to the console
+```
+
+> This is obviously a very primitive example but does a good job at illustrating the callback pattern. 
+
+```js
+function greeting(name){
+  return 'Hello, ' + name
+}
+
+function consoleLogResult(cb){
+  console.log(cb())
+}
+
+consoleLogResult(() => return greeting('Andrew'))
+//Prints 'Hello, Andrew' to the console
+```
+
+There are several elements:
+
+1.  Our `greeting` function takes a name and returns a greeting specific for that person.
+2.  Our `consoleLogResult` function takes a callback and prints its result to the console.
+3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
+
+> Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_.
+
 ### Arrays
 
 Can be thought of as a list.
@@ -273,127 +394,6 @@ Notes:
 
 1.  Reduce always returns a new value and therefore needs to be assigned to a variable.
 2.  When beginning to write .reduce functions, it can be easy to forget either the accumulator or the initializer. Remember, whatever the first argument you pass to the callback function will be the accumulator, regardless of what you name it.
-
-
-### Functions
-
-Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.
-
-Functions can be written using either a function declaration or an expression.
-
-A function declaration:
-
-```js
-function nameOfFunction() {
-  //Code to execute
-}
-```
-
-A function expression:
-
-```js
-const nameOfFunction = function() {
-  //Code to execute
-}
-```
-
-Functions are invoked by referencing the function name and pairing it with a pair of parentheses `()`. Think of these parentheses as the button you are pushing to invoke the function. For example, to invoke our above written function we would simply type:
-
-```js
-nameOfFunction()
-```
-
-> This would invoke the function and execute any code we have written inside of it.
-
-Functions can be set up to receive parameters, or values that will change depending on when the function is invoked. For example, to write a simple function that will add two numbers together we can do the following:
-
-```js
-function addTwo(num1, num2) {
-  return num1 + num2
-}
-```
-
-> This function will take in two numbers and return their sum. We do not know what the values for `num1` and `num2` will be for each invocation, so the parameters act as placeholders.
-
-To invoke this function we could do the following:
-
-```js
-addTwo(2, 2) //Returns 4
-addTwo(3, 3) //Returns 6
-addTwo(5, 5) //Returns 10
-```
-
-> This is how we make our functions reusable. When you invoke a function, the values passed to it are called arguments, they are used in the function in place of parameters.
-
-We use the `return` keyword to determine the value that is returned by the function. A function can return any data type, or even another function. When we invoke a function, it becomes equal to its return value and can be assigned to a variable. For example:
-
-```js
-let a = addTwo(2, 2) //Our variable a is now equal to 4 and can be used later
-let b = addTwo(3, 3) //Variable b is now equal to 6
-```
-
-> The return keyword prevents any code below it from executing. It effectively kicks us out of our function. Make sure your return statement is the last thing you want to have happen in a function.
-
-
-```js
-let name = 'Andrew'
-let name2 = 'Jonathan'
-
-function sayHi(person) {
-  return `Hello, ${person}!`
-}
-
-//What will be the value of the following invocations?
-
-let hiAndrew = sayHi(name)
-let hiJonathan = sayHi(name2)
-let hiBob = sayHi('Bob')
-```
-
-> Remember: Functions and if statements can also be nested inside of each other. 
-
-### Callbacks
-
-A callback is a function that is passed as an argument to another function.
-
-```js
-function callback() {
-  console.log('I am a callback')
-}
-//Our initial function
-
-function cbRunner(cb) {
-  //Notice, cbRunner takes in a callback function as its parameter
-  //it then invokes that function
-  cb()
-}
-
-cbRunner(callback)
-//Prints 'I am a callback' to the console
-```
-
-> This is obviously a very primitive example but does a good job at illustrating the callback pattern. 
-
-```js
-function greeting(name){
-  return 'Hello, ' + name
-}
-
-function consoleLogResult(cb){
-  console.log(cb())
-}
-
-consoleLogResult(() => return greeting('Andrew'))
-//Prints 'Hello, Andrew' to the console
-```
-
-There are several elements:
-
-1.  Our `greeting` function takes a name and returns a greeting specific for that person.
-2.  Our `consoleLogResult` function takes a callback and prints its result to the console.
-3.  Because we need to pass an argument to our callback function (`greeting`), we need to invoke it as part of the argument passed to `consoleLogResult`. Here we are using the arrow function syntax to do so.
-
-> Functions such as `consoleLogResult` whose purpose is to execute their callback functions and do something with their value are known as _higher order functions_.
 
 ### Objects
   - A collection of **key value pairs** with each key representing the name of a piece of data and the value being the value of that key.
