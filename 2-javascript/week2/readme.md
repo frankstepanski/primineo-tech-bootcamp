@@ -14,12 +14,12 @@ Every package that you install will be installed to a node_modules folder. This 
 
 <strong>Note:</strong> Never push your node_modules foler to your Github repo. Always create a .gitignore file and put the folder name there so git will ignore those folder(s) and file(s). 
 
-### Package.json
+#### Package.json
 Your project's package.json is the central place to configure and describe how to interact with and run your application. It enables npm to start your project, run scripts, install dependencies, publish to the NPM registry, and many other useful tasks. 
 
 Your package.json fills several roles in the lifecycle of your project, some of which only apply for packages published to NPM. If you're not publishing your project to the NPM registry or otherwise making it publicly available to others, your package.json is still essential to the development flow.
 
-### Package-lock.json
+#### Package-lock.json
 
 When you install the first package using npm a new file called ```package-lock.json``` appears in your project directory. This file helps lock package dependencies down, as well as their sub-dependencies. 
 
@@ -31,7 +31,7 @@ The package.json file only handles top-level dependencies, nothing more. But tho
 
 The package-lock file is a snapshot of our entire dependency tree and all the information npm needs to recreate the state of our node_modules/ folder. 
 
-### NPM Script
+#### NPM Script
 
 An npm script is a convenient way to bundle common shell commands for your project. They are typically commands, or a string of commands, which would normally be entered at the command line in order to do something with your application.
 
