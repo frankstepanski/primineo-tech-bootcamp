@@ -128,8 +128,9 @@ Resources:
    - [What are NPM scripts?](https://heynode.com/tutorial/what-are-npm-scripts/)
    - [What is package-lock.json?](https://heynode.com/tutorial/what-package-lockjson/)
    - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
-- Debugging in Node
+- Debugging
    - [Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
+   - [Overview](https://www.w3schools.com/js/js_debugging.asp)
 - Control flow:
    - <a href= "https://dorey.github.io/JavaScript-Equality-Table/unified/">Equality in JavaScript</a>
    - <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">truthy</a> vs <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>
