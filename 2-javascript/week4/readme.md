@@ -74,57 +74,9 @@ When setTimeout() is invoked, it doesn't execute the callback immediately. Inste
 
 After the current file is done executing, the events in the queue are executed in order from oldest to newest (or first-in, first-out). As a result, the callback function passed into setTimeout() will always run after the synchronous code in the current file.
 
-### Fetching Resources
-
-There are two ways to natively fetch resources.
-
- - Using XMLHTTPRequest (XHR for short)
- - Using the Fetch API
-
-Both XHR and Fetch are well-supported on all browsers.
-
-Most developers prefer to use Fetch over XHR because it uses promises. But this difference doesn’t matter in practice because most of the time developers will use libraries to simplify both Fetch and XHR, and these libraries use Promises anyway.
-
->Note: You will mainly see XHR in existing codebases that have been in production for at least a few years (probably a lot longer).
-
-### Fetch
-You can send a Fetch request by writing the fetch method. The response comes back in a then method.
-
-```js
-fetch('https://link-to-resource').then(response => {
-  console.log(response)
-})
-```
-
-You need to treat the response before you can get the payload. In this case, the payload is hidden inside the body property.
-
-In this case, the response also contains **JSON**. You can convert the response into JSON with `response.json``. Then you get the payload in the next then method.
-
-```js
-fetch('https://api.github.com/users/frankstepanski/repos')
-  .then(response => response.json())
-  .then(payload => {
-    console.log(payload)
-  })
-```
-
 ### Understanding Promises
 
-There is a phenomenon called “Callback Hell” out in the world where layers of callbacks are nested within each other. This happens when you need to perform a series of asynchronous requests that depend on the data from a previous request.
-
-Promises make things much simpler in a then call:
-
-```js
-fetch('https://link-to-resource')
-  .then(response => response.json())
-  .then(data => {
-    return fetch(https://${data.url})
-			.then(response => response.json())
-  })
-  .then(data2 => {
-    // Do something with data2
-  })
-```
+The most popular way to manage asynchronous code in JavaScript is through an object called a **promise**. A promise can run asynchronous code and provide a set of methods that allows you to extract a single result from that code.
 
 A JavaScript Promise is an if-else statement for the future. We don’t know whether the statement will flow into if or else until the future arrives. So promises have three states:
 
@@ -210,6 +162,40 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then(face => console.log(face)) 
   .catch(face => console.log(face)) 
+```
+
+### Fetching Resources
+
+There are two ways to natively fetch resources.
+
+ - Using XMLHTTPRequest (XHR for short)
+ - Using the Fetch API
+
+Both XHR and Fetch are well-supported on all browsers.
+
+Most developers prefer to use Fetch over XHR because it uses promises. But this difference doesn’t matter in practice because most of the time developers will use libraries to simplify both Fetch and XHR, and these libraries use Promises anyway.
+
+>Note: You will mainly see XHR in existing codebases that have been in production for at least a few years (probably a lot longer).
+
+### Fetch
+You can send a Fetch request by writing the fetch method. The response comes back in a then method.
+
+```js
+fetch('https://link-to-resource').then(response => {
+  console.log(response)
+})
+```
+
+You need to treat the response before you can get the payload. In this case, the payload is hidden inside the body property.
+
+In this case, the response also contains **JSON**. You can convert the response into JSON with `response.json``. Then you get the payload in the next then method.
+
+```js
+fetch('https://api.github.com/users/frankstepanski/repos')
+  .then(response => response.json())
+  .then(payload => {
+    console.log(payload)
+  })
 ```
 
 Resources:
