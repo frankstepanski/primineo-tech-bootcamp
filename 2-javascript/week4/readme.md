@@ -156,6 +156,7 @@ Resources:
     - <a href="https://www.youtube.com/watch?v=SLwpqD8n3d0&t=8s">Explanation</a>
     - <a href="https://www.youtube.com/watch?v=-mN3VyJuCjM&t=39s">Examples</a>
   - Promises:
+    - <a href="https://www.youtube.com/watch?v=RvYYCGs45L4&t=1s">Promises in 100 seconds</a>
     - <a href="https://javascript.info/promise-basics">Documentation</a>
     - <a href="https://javascript.info/promise-chaining">Chaining</a>
     - <a href="https://web.dev/promises/">Explanation with examples</a>
