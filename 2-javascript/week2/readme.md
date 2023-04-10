@@ -1,7 +1,10 @@
 # Week 2
 
+### Node
 
-## Using NPM 
+Node is a program that will allow you to run JavaScript outside of a web browser. With Node, you can build different types of programs with JavaScript. And npm, which was originally short for Node package manager, is a package manager for JavaScript. The npm package manager will help you manage your JavaScript project dependencies.
+
+### Using NPM 
 
 To be able to install and use any package (aka library or framework) you should first execute the command ```npm init```. This command initializes your project with a package.json file which is a .json file with a object literal with keys and values that describe your project.
 
@@ -17,6 +20,7 @@ Your project's package.json is the central place to configure and describe how t
 Your package.json fills several roles in the lifecycle of your project, some of which only apply for packages published to NPM. If you're not publishing your project to the NPM registry or otherwise making it publicly available to others, your package.json is still essential to the development flow.
 
 ### Package-lock.json
+
 When you install the first package using npm a new file called ```package-lock.json``` appears in your project directory. This file helps lock package dependencies down, as well as their sub-dependencies. 
 
 When you install a package, most likely that package will have many dependencies and sub-depenedencies in order for it to run. 
@@ -38,6 +42,25 @@ Scripts are stored in a project's package.json file, which means they're shared 
     "start": "http-server --cors -c-1 -p 8080"
   },
 ```
+
+### Debugging
+
+VSCode has its own debugger built into the program. The debugger can easily be used with JavaScript files. To start the debugger, navigate to the file that you wish to debug and then press the Run button.
+
+#### Running the Debugger
+
+The steps would be:
+
+ 1. In VSCode, open up a .js file and click the Run button.
+ 2. You will then get prompted to choose an environment. Select Node.js, and VSCode will run your code.
+ 3. Below your code, a new pane called the Debug Console will open. 
+ 
+ ### Setting breakpoints
+
+ Hold your pointer to the left of each line number, you will see a faded red dot. Click that dot to create a breakpoint, which is a signal that you place in your code to tell the debugger to stop the execution of your code. 
+
+ Each breakpoint that you choose will stop the code from being executed before that line of code is run. 
+
 
 ### Control flow
 
