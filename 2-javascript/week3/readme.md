@@ -224,11 +224,6 @@ const evens = nums.filter(function(element, index, array) {
 })
 ```
 
- Notes:
-
-1.  In this example uses the modulus operator `%` which will return the remainder of the division. If we divide by two and the remainder is 0, we know it's an even number.
-2.  Filter always returns a new array and therefore needs to be assigned to a variable
-
 #### .reduce
 
 .reduce allows us to take many values and reduce them down to a single value. It is slightly different from the others we have looked at today because it takes in two arguments, a callback function and an initializer. The initializer is important because it tells .reduce what data type we are expecting to return from the function. If no initializer is provided, the first item in the array will be used as the initial starting value in the function. 
