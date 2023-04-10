@@ -2,7 +2,25 @@
 
 ### Node
 
-Node is a program that will allow you to run JavaScript outside of a web browser. With Node, you can build different types of programs with JavaScript. And npm, which was originally short for Node package manager, is a package manager for JavaScript. The npm package manager will help you manage your JavaScript project dependencies.
+Node is a `javascript runtime environment`.
+
+Javascript has been around since 1995 and for a while it was only used inside of a browser environment, meaning that was the only place we could use it.
+
+This meant that developers were having to code in multiple languages to create a front-end and back-end to their applications.
+
+When Node came out, it allowed developers to write Javascript code that runs directly on the computer process itself, rather than being confined to a browser environment. This means that Node can be used to write server-side applications that have full access to the operating system, file system, etc.
+
+Node was written in `C`, `C++`, and `Javascript`. It was built on top of the `V8 Javascript` engine. This is the same engine that browsers like `Google Chrome` use.
+
+#### Running A Javascript File
+
+We can execute a JS file by running the terminal command
+
+```bash
+$ node "name of file to execute"
+```
+
+This will turn the terminal into an interactive javascript environment.
 
 ### Using NPM 
 
