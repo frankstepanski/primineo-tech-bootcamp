@@ -12,7 +12,7 @@ If you do not do ```npm init``` first, the first time you install your first pac
 
 Every package that you install will be installed to a node_modules folder. This folder (will be created if not already there) contains the executable source code for each package that you install.
 
-<strong>Note:</strong> Never push your node_modules foler to your Github repo. Always create a .gitignore file and put the folder name there so git will ignore those folder(s) and file(s). 
+<strong>Note:</strong> Never push your `node_modules` folder to your Github repo. Always create a .gitignore file and put the folder name there so git will ignore those folder(s) and file(s). 
 
 #### Package.json
 Your project's package.json is the central place to configure and describe how to interact with and run your application. It enables npm to start your project, run scripts, install dependencies, publish to the NPM registry, and many other useful tasks. 
