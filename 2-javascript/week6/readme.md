@@ -30,7 +30,7 @@ Benefits of testing:
 
 Let's write our first unit test:
 
-1. Create a `__tests__` folder and a `functions.js` file in the src folder.
+1. Create a `__tests__` folder and a `functions.js` file in the root folder.
    > The functions file is for showing off jest functionality. These functions can come from anywhere
 2. Create a `functions.test.js` file in the `__tests__` folder. This file will be used to test our functions in `functions.js`.
 3. Let's look at what goes into writing a unit test using Jest:
