@@ -30,6 +30,7 @@ function Book(title, author, year) {
 const book2 = new Book('Book One', 'John Doe', '2013');
 
 // via a class
+// a class is just syntactic sugar for a constructor function
 class Book {
      constructor(title, author, year) {
         this.title = title;
@@ -39,4 +40,15 @@ class Book {
 }
 
 const book3 = new Book('Book One', 'John Doe', '2013');
+
+// inheritance via a class
+class Magazine extends Book {
+        constructor(title, author, year, month) {
+            super(title, author, year); // call the parent constructor
+            this.month = month;
+        }
+    }
+
+const mag1 = new Magazine('Mag One', 'John Doe', '2013', 'Jan');
+
 
