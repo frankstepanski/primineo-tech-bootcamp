@@ -1,5 +1,9 @@
 
 
+
+
+
+
 // Ways to create objects in JavaScript
 
 // via an object literal
@@ -8,6 +12,28 @@ const book = {
    author: 'John Doe',
    year: '2013',
  };
+
+delete book.year; // delete a property
+
+console.log(book['title']); // bracket notation - used when the property name is dynamic
+console.log(book.title); // dot notation
+
+// nested objects
+const spaceship = {
+    pilot: {
+        name: 'elon musk',
+        age: 42,
+        favoriteFood: ['steak', 'ice cream']
+    },
+    engine: {
+        model: 'Falcon 1',
+        fuel: 'liquid oxygen',
+        speed: '7,500 m/s'
+    }
+};
+
+
+
 
 // via a function
 function createBook(title, author, year) {
