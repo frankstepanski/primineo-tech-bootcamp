@@ -19,9 +19,10 @@ class Card {
 class Deck {
   
       constructor() {
-          this._cards = [];
+          this._cards = []; // 52 card objects
       };
     
+      // getter
       get cards() {
         return 	this._cards;
       }
@@ -37,9 +38,10 @@ class Deck {
         const ranks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
         const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     
-        for (let i = 0; i < suits.length; i++) {
-           for (let j = 0; j < ranks.length; j++) {
-              this._cards.push(new Card(ranks[j], suits[i], values[j]));
+        for (let i = 0; i < suits.length; i++) { // ♠
+           for (let j = 0; j < ranks.length; j++) { // A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K
+              // [{ rank: 'A', suit: '♠', value: 1}, { rank: '2', suit: '♠', value: 2}] => 52 card objects
+              this._cards.push(new Card(ranks[j], suits[i], values[j])); 
            }
         }
       }

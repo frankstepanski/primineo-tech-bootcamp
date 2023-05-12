@@ -2,9 +2,16 @@
 
 ### Testing: What and Why?
 
-Testing refers to the process of writing tests for our code based on what we expect to happen and then running our code against those tests. Our code will be considered successful if it passes the tests that we write for it. 
+Testing refers to the process of writing tests for our code based on what we expect to happen and 
+then running our code against those tests. Our code will be considered successful if it passes the 
+tests that we write for it. 
 
-The idea is that we determine from the start what we expect a function or a component to do, write tests to reflect these expectations, and then put our components up against these tests. If they behave the way we expect, then we can move on. Otherwise, we need to refactor our code to pass the tests. There are several common kinds of testing in the development world:
+The idea is that we determine from the start what we expect a function or a component to do, 
+write tests to reflect these expectations, and then put our components up against these tests. 
+If they behave the way we expect, then we can move on. Otherwise, we need to refactor our code 
+to pass the tests. 
+
+There are several common kinds of testing in the development world:
 
 - Unit Testing: Used to test a single function.
 - Endpoint Testing: Used to test an endpoint. Postman tests would be an example of this.
@@ -15,18 +22,24 @@ Traditionally, testing is handled by QA engineers but there is a trend emerging 
 
 ![Test driven development](images/tdd.jpeg)
 
-There is a huge need for developers who know how to test their code and the more familiar you become with it, the more valuable you will be to a future employer. 
+There is a huge need for developers who know how to test their code and the more familiar you become with it,
+the more valuable you will be to a future employer. 
 
 Benefits of testing:
 
-- You know exactly what you expect to happen right from the start. This reduces debugging time as it allows you to develop in a more isolated environment
+- You know exactly what you expect to happen right from the start. This reduces debugging time as it allows 
+  you to develop in a more isolated environment.
 - It created automatic documentation for your project
 - Allows you to think through your logic beforehand and find any holes you may not have intended.
 
 ### Jest
 
-- Jest is a unit testing library which allows us to perform unit tests.
-- Jest comes out of the box with create-react-app.
+- Developed and maintained by Facebook.
+- Jest is a test runner (aka testing environment). It goes and runs your test.
+- Jest is also a assertion library. It verifies that things are correct.
+- Jest also does mocking (fake data or fake functions) for more inclusive tests.
+- Jest uses Jasmine behind the scenes (assertion library and framework).
+- Note: Jest does the same as Mocha (framework) and Chai (assertion library).
 
 Let's write our first unit test:
 

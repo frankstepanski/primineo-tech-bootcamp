@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // Ways to create objects in JavaScript
 
 // via an object literal
@@ -32,8 +26,7 @@ const spaceship = {
     }
 };
 
-
-
+console.log("pilot name", spaceship.pilot.name) // spaceship['pilot']['name']
 
 // via a function
 function createBook(title, author, year) {
