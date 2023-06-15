@@ -1,196 +1,153 @@
-/* 
-  Copyright (c) 2023 Promineo Tech
-  Author:  Promineo Tech Academic Team
-  Subject:  JavaScript CRUD Operations with JQuery
-  FE Lab Week 12
-*/
+/*------------------------ Setting up a JSON server ------------------------*/
 
-/* ----------------------------------------------------- */
-// Key Term List:
-// JSON server
-// JSON
-// CRUD (Create, Read, Update, Delete)
-// HTTP Verbs: GET, PUT/PATCH, POST, DELETE
-// REST API
-// naming conventions
-// kebab-case
-// SNAKE_CASE
-// PascalCase
-// camelCase
-
-/* ----------------------------------------------------- */
-// Please do not alter the existing code unless instructed to do so.
-// Read the comments and add your code where it is specified for each question.
-/* ----------------------------------------------------- */
-
-/**
- * BEFORE YOU START:
- * You should be working in a folder containing 3 files: db.json, index.html, and week12Lab.js.
- *
- * The db.json should be an object. That object contains one key:value pair.
- * an object called "studentRoster" that is an array of objects with multiple
- * key:value pairs: "fullName", "researchAssignment", and "id".
- *
- * Your index.html has been set up with CDN's to use Jquery & Bootstrap.
- * Removing/changing any <script> or <link> elements may affect functionality.
- *
- * Do not change these or the data inside the db.json until you have completed
- * the project and/or feel comfortable changing them.
- *
- * GOAL: We are teaching a class of x number of students.
- *       For homework, we're assigning each student to research an animal.
- *
- *       We have an API endpoint: studentRoster
- *       The info is also in your db.json
- *
- *       1) Create a form that will GET/PUT/POST/DELETE to/from our studentRoster
- *       2) Create a section that displays our students name research assignment
- *
- *          This can be a table, a div, however you'd like to show the info.
- *          For this Lab, we'll be using a table.
- *
- *       You should be able to PUT(update)/DELETE(delete) existing students
- *           & POST(add) new students to the roster.
- *
- * Note: This lab uses Jquery/ajax for all CRUD operations.
- */
-
-/*------------------------ Part 1: Setting up a JSON server ------------------------*/
-console.log(`-------------------------- 
-Part 1: Setup your JSON server`)
+// Setup your JSON server
 
 /**
  * Documentation: https://www.npmjs.com/package/json-server#getting-started
  *
- * Step 1: In your console, type: npm install -g json-server
+ * Step 1: In your console, type: npm install json-server
  *
- * Step 2: In your console, type: json-server --watch db.json
- *         Your console should look something like this:
+ * Step 2: Create a script in your package.json file:
+ *        "scripts": {
+ *           "json:server": "json-server --watch db.json"
+ *        }
  *
  *         Resources
  *         http://localhost:3000/studentRoster
  *
- *         Above is the URL we'll use for our CRUD operations.
- *
- * Step 3: Below, create a const declaration for your URL endpoint
- *
- * ↓ YOUR CODE HERE ↓ */
+ *         Above is the URL we'll use for our CRUD operations. 
+ *         It will dyanmically update as we add, delete, and update students.
+ * 
+ **/
 
-/*------------------------ Part 2: HTTP Verb: GET ------------------------*/
-console.log(
-  `-------------------------- 
-Part 2: GET and displaying the information`
-)
+// global variable to store all students
+const STUDENT_DATA=[];
 
-/**
- * Step 1: Use $.get(api_url_here).then(data => console.log(data)) to check if
- *         our GET is set up correctly. You should be logging an array of objects.
- *
- * Step 2: Instead of logging, loop over data and add your information to the DOM.
- *
- *         Reminder: While you are not required to, the lab solution uses a <table>
- *
- * ↓ YOUR CODE HERE ↓ */
+// function fetches all students from the API and stores in the STUDENT_DATA array
+function fetchStudents(API) {
 
-/*------------------------ Part 3: HTTP Verb: POST ------------------------*/
-console.log(
-  `-------------------------- 
-Part 3: POST and adding new students`
-)
+  // with jQuery (not recommended 👎)
+  // $.get(api_url_here).then(data => console.log(data))
 
-/**
- * Step 1: Create a form in our HTML to post including
- *         label/inputs for each new student and a button to submit.
- *
- * Step 2: Add an event listener in your code below to the <button> element
- *         you created to log 'pls work' on click, just to make sure it's working.
- *
- * Step 3:
- * Docs:   https://api.jquery.com/jquery.post/
- *
- *         Replace the console.log('pls work') with jQuery's $.post() method.
- *
- *         The first argument is a URL, the second argument is an object containing
- *         the data to pass in. Use jquery to target the inputElement.val() of our form.
- *
- *         Your button should now post a new user on click.
- *
- * ↓ YOUR CODE HERE ↓ */
+  // fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-/*------------------------ Part 4: HTTP Verb: DELETE ------------------------*/
-console.log(
-  `-------------------------- 
-Part 4: DELETE and deleting individual students`
-)
+  STUDENT_DATA.length = 0; // reset the array
 
-/**
- * Docs:   https://api.jquery.com/jquery.ajax/
- *
- * Step 1: Create a new <td> element: a delete button for every student in part 2.
- *
- *         <button>delete</button>
- *
- *         Here's a lil' ASCII trash bin: 🗑
- *
- * Step 2: Let's handle deleting a little bit differently from post.
- *
- *         On the button element we just added, give it a property of onclick=""
- *         Inside the "", we're going to give it function to do.
- *
- * Step 3: Create a function called "deleteUser" below, that takes in an id as a parameter.
- *         Inside the code block, we're going to use jquery/ajax to delete a user.
- *
- * Step 4: Add the deleteUser() function inside our
- *         onclick="" on the delete button.
- *
- *         Make sure you are passing in the correct ID to deleteUser() above,
- *         and you have added the ID to the end of the ajax URL in the deleteUser() function.
- *
- *         Your elements should now be getting deleted!
- *
- * ↓ YOUR CODE HERE ↓ */
+  // fetch returns a promise: https://developer.mozilla.org/en-US/docs/Web/API/fetch
+  return fetch(API)
+            .then(res => res.json())
+            .then(data => {  // chaining promises
+                STUDENT_DATA.push(...data);
+                console.log(STUDENT_DATA);
+            })
+            .catch(err => console.log(err))
+}
 
-/*------------------------ HTTP Verb: UPDATE ------------------------*/
-console.log(
-  `-------------------------- 
-Part 4: PUT and updating the information`
-)
+// function renders all students to the DOM
+function renderStudents() {
 
-/**
- * Step 1: Create a function called updateUser(){}
- *
- * Step 2: Create a form in our HTML to update a student's name/assignment by id.
- *         We need labels/input elements for id/studentName/researchAssignment.
- *
- * Step 3: Add a new header for students ID id in our table.
- * Step 4: Set up $.ajax() for 'PUT'
- *         We need two key/value pairs: method and data
- *
- *         Get the new id/name/research assignment by id, and pass those values
- *         into the appropriate places.
- *
- * Step 5: Add an event listener after your updateUser() function to
- *         do the updateUser function on click.
- *
- * ↓ YOUR CODE HERE ↓ */
+    const table = document.querySelector('table');
+    const tbody = document.querySelector('tbody');
 
-console.log(`-----------Finished------------`)
+    console.log("*** renderinStudents =>", `${STUDENT_DATA.length} students`);
 
-/*------------------------ Optional: Style it with bootstrap! ------------------------*/
+    for (let i = 0; i < STUDENT_DATA.length; i++) {
 
-/**
- * Tables: https://getbootstrap.com/docs/5.3/content/tables/#overview
- * Forms: https://getbootstrap.com/docs/5.3/forms/overview/#overview
- *
- * There's no right or wrong here. Play around with different styles/reorganization.
- *
- * If you want some 'above and beyond' ideas:
- * 1) Instead of a table, look into organizing the students differently with bootstrap:
- *      Card, Accordion, Dropdowns, Popover, Tooltips
- *      Do a list group, and every item inside is one of the above
- * 3) Redo the update form - open the update form in a bootstrap modal when you click on
- *    a student, pass in the students id/name/assignment automatically to the form so the
- *    user can make edits to a form thats not initially blank.
- * 4) Re-style the delete button ASCII character to something more "modern"
- *
- */
+        const tr = document.createElement('tr');
+        const tdId = document.createElement('td');
+        const tdName = document.createElement('td');
+        const tdAssignment = document.createElement('td');
+        const tdDelete = document.createElement('td');
+
+        tdId.textContent = STUDENT_DATA[i].id;
+        tdName.textContent = STUDENT_DATA[i].fullName;
+        tdAssignment.textContent = STUDENT_DATA[i].researchAssignment;
+        tdDelete.textContent = '🗑';
+        tdDelete.classList.add('delete');
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdName);
+        tr.appendChild(tdAssignment);
+        tr.appendChild(tdDelete);
+
+        tbody.appendChild(tr);
+
+        tdDelete.addEventListener('click', () => {
+            deleteStudent(STUDENT_DATA[i].id);
+            tr.remove();
+        })
+
+        table.appendChild(tbody);
+        
+    }
+}
+
+// function adds a student to the API
+function postStudent(student) {
+
+    const url = 'http://localhost:3000/studentRoster';
+
+    // add
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(student)
+    })
+    .then(res => res.json())
+    .then(data => STUDENT_DATA.push(...data))
+}
+
+// function deletes a student from the API
+function deleteStudent(id) {
+
+    const url = `http://localhost:3000/studentRoster/${id}`;
+
+    fetch(url, {
+
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => STUDENT_DATA.filter(data => data.id !== id))
+
+  }
+
+function submitHandler() {
+
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        const id = STUDENT_DATA.length + 1;
+        const name = form.querySelector('#full-name').value;
+        const assignment = form.querySelector('#research-assignment').value;
+
+        const student = {
+            id: id,
+            fullName: name,
+            researchAssignment: assignment
+        }
+
+        postStudent(student);
+    })
+
+}
+
+// boilerplate app (to start the app):
+// note: async means that a function defined inside will return a promise
+addEventListener('DOMContentLoaded', async () => {
+
+    // fetch students:
+    // await: makes a function wait for a promise (makes asynchrnous code look synchronous)
+    await fetchStudents('http://localhost:3000/studentRoster');
+    
+    // render students
+    renderStudents();
+
+    // attach event listeners:
+    submitHandler();
+
+});

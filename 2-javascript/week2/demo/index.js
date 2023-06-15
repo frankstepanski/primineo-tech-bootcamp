@@ -1,70 +1,94 @@
-<<<<<<< HEAD
-function forLoop() {
+
+// single line comment
+
+/*
+
+  multi-line comment
+
+*/
+
+// Psuedo code:
+// 1. write out the steps of what you want to do
+// 2. write out the code to do each step
+
+// variables rule of thumb:
+// always create variables with the smalled scope possible
+
+function blockScope() { // 1st block
+  
+    if (5 === 5 && 4 > 3 && 3 ===3) { // 2nd block
+        
+        const a = 5000; // available in all child blocks
+
+        if (5 === 5) { // 3rd block
+
+            let a = 5; // although a is already defined, this is a new variable
+            let x = 5; 
+           
+            console.log(`X is equal to ${x}`);
+        }
+
+        for (let i = 0; i < 5; i++) { // 4th block
+
+            let y = 5; // let - block scope
+            let x = 50; // although x is already defined, this is a new variable
+            
+            console.log(`X is equal to ${x}`);
+        }
+
+    }
+
+    console.log(y); // error - out of scope
+    console.log(x); // error - out of scope
+}
+
+
+// if statements:
+
+    if (5 > 3) {
+        console.log("This is true");
+    }
+
+    let a = true;
+
+    if (3 > 5) {
+    
+        console.log("This is not true");
+
+    } else if (5 > 3) { 
+
+        console.log("Made to the else if"); 
+ 
+    } else { // can only have 1 else block
+
+        console.log("Made to the else statement - other conditions are false");
+    }
+
+
+// for loops:
 
     let total = 0;
+
     for (let i = 0; i < 5; i++) {
+        
         total += i;
     }
-    return total;
 
-}
+// loop through a string:
+    
+    let str = "Hello World";
 
-forLoop();
-
-function arrayLoop() {
-
-    let array = [1, 2, 3, 4, 5];
-    let total = 0;
-    for (let i = 0; i < array.length; i++) {
-        total += array[i];
-    }
-    return total;
-}
-
-arrayLoop();
-=======
-function test1(val) {
-
-    let result = "";
-  
-    if (val > 5) {
-      result = "Bigger than 5";
-    }
-  
-    if (val <= 5) {
-      result = "5 or Smaller";
+    for (let i = 0; i < str.length; i++) { // i++ is the same as i = i + 1
+        console.log(str[i]);
     }
 
-    // Only change code above this line
-    return result;
-}
-  
-console.log(test1(4));
+// while loops:
 
-function test2(val) {
+    let sum = 0;
+    let i = 0; // define incrementor outside of the loop
 
-    for (let i = 0; i < val.length; i++) {
-      console.log(val[i]);
+    while (i < 5) {
+        // don't initialize the incrementor here - it will create an infinite loop
+        sum += i;
+        i++; // incrementor
     }
-}
-
-test2("have a good easter")
-
-function test3(val) {
-
-    let reverse = "";
-
-    if (val.length === 0) return false;
-
-    if (val === "hello") return "goodbye";
-
-    for (let i = val.length -1; i > 0; i--) {
-     
-        reverse += val[i];
-    }
-
-    return reverse;
-}
-
-console.log(test3("easter"));
->>>>>>> 2aa59c329ef7c45da0da6089ef0c3abd37784fa0

@@ -10,13 +10,13 @@
 */
 
 // *** SELECTING DOM ELEMENTS ***
-/*
+
 // Find an element with the class "value"
-console.log(document.querySelector(".value").firstChild.nodeName);
-console.log(document.querySelector(".value").firstChild.nodeValue);
+console.log(document.querySelector(".value"));
+
 // Find a <button> element
-console.log(document.querySelector("button").firstChild.nodeName);
-console.log(document.querySelector("button").firstChild.nodeValue);
+console.log("button", document.querySelector("button").firstChild.nodeName);
+console.log("button", document.querySelector("button").firstChild.nodeValue);
 
 // find all buttons
 const buttons = document.querySelectorAll("button");
@@ -24,7 +24,7 @@ const buttons = document.querySelectorAll("button");
 
 // iterate over the NodeList of buttons
 for (let element of buttons.values()) {
-  console.log(element.firstChild.nodeValue);
+  console.log("button nodeList element", element.firstChild.nodeValue);
 }
 
 // find all h3
@@ -32,7 +32,7 @@ const heading3List = document.querySelectorAll("h3");
 
 // iterate over entire list
 for (let element of heading3List.values()) {
-  console.log(element.firstChild.nodeValue);
+  console.log("headings", element.firstChild.nodeValue);
 }
 
 // find all divs containing ratings
@@ -40,9 +40,8 @@ const ratings = document.querySelectorAll(".rating .value");
 
 // iterate over entire list
 for (let element of ratings.values()) {
-  console.log(element.firstChild.nodeValue);
+  console.log("divs with ratings", element.firstChild.nodeValue);
 }
-*/
 
 
 // *** UPDATING DOM ELEMENTS ***
@@ -57,11 +56,11 @@ for (let desc of descriptions) {
 }
 
 // returns a NodeList:
-const ratings = document.querySelectorAll(".rating .value");
+const _ratings = document.querySelectorAll(".rating .value");
 
-console.log(ratings);
-console.log(ratings.length);
-console.log(ratings.item(2).innerText);
+console.log(_ratings);
+console.log(_ratings.length);
+console.log(_ratings.item(2).innerText);
 
 for (let rating of ratings) {
   let ratingValue = parseFloat(rating.innerText);
@@ -113,4 +112,3 @@ const submitHandler = (event) => {
 
 // run function "main" once DOM has been loaded
 window.addEventListener("DOMContentLoaded", main);
-

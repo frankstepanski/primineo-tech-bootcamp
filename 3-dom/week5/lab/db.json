@@ -6,24 +6,19 @@
       "id": "1"
     },
     {
-      "fullName": "Tabitha Brown",
-      "researchAssignment": "rabbit",
+      "fullName": "Mr. Tyrone Ziemann II",
+      "researchAssignment": "dog",
       "id": "2"
     },
     {
-      "fullName": "Patti Fritsch",
-      "researchAssignment": "fish",
+      "fullName": "Pete Heard",
+      "researchAssignment": "cat",
       "id": "3"
     },
     {
-      "fullName": "Mr. Tyrone Ziemann II",
-      "researchAssignment": "cat",
-      "id": "4"
-    },
-    {
-      "fullName": "Tammy Kunde",
+      "fullName": "Tom Brady",
       "researchAssignment": "bird",
-      "id": "5"
+      "id": "4"
     }
   ]
 }

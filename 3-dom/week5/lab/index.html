@@ -4,40 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#">
     <title>Week 12 Lab</title>
-    <!-- Bootstrap CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+    <script defer src="./app.js"></script>
+    <style>
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 25%;
+        margin-bottom: 15px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #D3D3D3;
+      }
+
+      form {
+        margin-bottom: 15px;
+        padding: 0px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      .delete {
+        cursor: pointer;
+      }
+
+    </style>
   </head>
   <body>
-    <!-- Your HTML Code below here -->
 
-    <!-- ALL OF YOUR JQUERY/BOOTSTRAP/SCRIPT SETUP ARE BELOW HERE. 
-  WE USE CDN'S (content delivery network) INSTEAD OF NODE_MODULES -->
+    <!- Table to display students ->
+    <h3>Student List:</h3>
+    <table> 
+      <tbody></tbody>
+    </table>
 
-    <!-- Jquery CDN  -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <!-- Popper CDN: For dropdowns, popovers, tooltips, etc-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap Script CDN -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Our script -->
-    <script src="./app.js"></script>
+    <!- Adding a new student -> 
+    <h3>Add a New Student:</h3>
+    <form id="add-student">
+      <input type="text" id="full-name" placeholder="Full Name" required />
+      <input type="text" id="research-assignment" placeholder="Research Assignment" required />
+      <button type="submit">Add</button>
+    </form>
   </body>
 </html>
