@@ -1,5 +1,66 @@
 # Week 6
 
+### Node
+
+Node is a `javascript runtime environment`.
+
+Javascript has been around since 1995 and for a while it was only used inside of a browser environment, meaning that was the only place we could use it.
+
+This meant that developers were having to code in multiple languages to create a front-end and back-end to their applications.
+
+When Node came out, it allowed developers to write Javascript code that runs directly on the computer process itself, rather than being confined to a browser environment. This means that Node can be used to write server-side applications that have full access to the operating system, file system, etc.
+
+Node was written in `C`, `C++`, and `Javascript`. It was built on top of the `V8 Javascript` engine. This is the same engine that browsers like `Google Chrome` use.
+
+#### Running A Javascript File
+
+We can execute a JS file by running the terminal command
+
+```bash
+$ node "name of file to execute"
+```
+
+This will turn the terminal into an interactive javascript environment.
+
+### Using NPM 
+
+To be able to install and use any package (aka library or framework) you should first execute the command ```npm init```. This command initializes your project with a package.json file which is a .json file with a object literal with keys and values that describe your project.
+
+If you do not do ```npm init``` first, the first time you install your first package, a package.json file will be created anyways. 
+
+Every package that you install will be installed to a node_modules folder. This folder (will be created if not already there) contains the executable source code for each package that you install.
+
+<strong>Note:</strong> Never push your `node_modules` folder to your Github repo. Always create a .gitignore file and put the folder name there so git will ignore those folder(s) and file(s). 
+
+#### Package.json
+Your project's package.json is the central place to configure and describe how to interact with and run your application. It enables npm to start your project, run scripts, install dependencies, publish to the NPM registry, and many other useful tasks. 
+
+Your package.json fills several roles in the lifecycle of your project, some of which only apply for packages published to NPM. If you're not publishing your project to the NPM registry or otherwise making it publicly available to others, your package.json is still essential to the development flow.
+
+#### Package-lock.json
+
+When you install the first package using npm a new file called ```package-lock.json``` appears in your project directory. This file helps lock package dependencies down, as well as their sub-dependencies. 
+
+When you install a package, most likely that package will have many dependencies and sub-depenedencies in order for it to run. 
+
+So why doesn't the ```package.json``` handle all this? Good question.
+
+The package.json file only handles top-level dependencies, nothing more. But those dependencies may have their own dependencies, etc. Like if we use the very loose analogy of you know about your 1st cousins, but you may have forgotten about you 2nd and 3rd cousins. 😧
+
+The package-lock file is a snapshot of our entire dependency tree and all the information npm needs to recreate the state of our node_modules/ folder. 
+
+#### NPM Script
+
+An npm script is a convenient way to bundle common shell commands for your project. They are typically commands, or a string of commands, which would normally be entered at the command line in order to do something with your application.
+
+Scripts are stored in a project's package.json file, which means they're shared amongst everyone using the codebase. They help automate repetitive tasks, and mean having to learn fewer tools. Node npm scripts also ensure that everyone is using the same command with the same flags.
+
+```JS
+"scripts": {
+    "start": "http-server --cors -c-1 -p 8080"
+  },
+```
+
 ### Testing: What and Why?
 
 Testing refers to the process of writing tests for our code based on what we expect to happen and 
