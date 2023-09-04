@@ -1,6 +1,5 @@
 # Week 3
 
-
 ### Functions
 
 Functions are reusable pieces of code that we can use to execute code blocks whenever they are invoked.

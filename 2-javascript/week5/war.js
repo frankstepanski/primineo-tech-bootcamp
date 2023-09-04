@@ -38,13 +38,15 @@ class Deck {
         const ranks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
         const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
     
-        for (let i = 0; i < suits.length; i++) { // ♠
+        for (let i = 0; i < suits.length; i++) { // ♠ suits
            for (let j = 0; j < ranks.length; j++) { // A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K
               // [{ rank: 'A', suit: '♠', value: 1}, { rank: '2', suit: '♠', value: 2}] => 52 card objects
               this._cards.push(new Card(ranks[j], suits[i], values[j])); 
            }
         }
       }
+
+      // cards [ { rank: 'A', suit: '♠', value: 1}, { rank: '2', suit: '♠', value: 2}]
 
       _shuffle() {
 
@@ -78,13 +80,13 @@ class Player {
     }
 
     set deck(newDeck) {
-        if (Array.isArray(newDeck)) {
+        if (Array.isArray(newDeck)) { // check if newDeck is an array
           this._playerDeck = newDeck;
         }
     }
     
     set score(newScore) {
-        if (!isNaN(newScore)) {
+        if (!isNaN(newScore)) { // check if newScore is a number
           this._playerScore = newScore;
         }
     }
@@ -124,8 +126,8 @@ class Dealer {
         const cards = new Deck().buildDeck();
     
         // step 3: assign 26 cards to each player)
-        this._players[0].deck = [...cards.slice(0,26)];
-        this._players[1].deck = [...cards.slice(26,52)];
+        this._players[0].deck = [...cards.slice(0,26)]; // create a copy of the first 26 cards
+        this._players[1].deck = [...cards.slice(26,52)]; // create a copy of the last 26 cards
     
         // step 4: deal card from each player until done    
         console.log("\t\t\t\t**** Dealing Hands ****")
