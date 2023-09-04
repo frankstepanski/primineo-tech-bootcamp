@@ -9,14 +9,15 @@
  *
  * Step 2: Create a script in your package.json file:
  *        "scripts": {
- *           "json:server": "json-server --watch db.json"
+ *           "json-server": "json-server --watch db.json"
  *        }
  *
  *         Resources
  *         http://localhost:3000/studentRoster
  *
- *         Above is the URL we'll use for our CRUD operations. 
- *         It will dyanmically update as we add, delete, and update students.
+ * Step 3: Install VSC Extension: Preview on Web Server (Live Server causes a reload on POST/PUT/DELETE)
+ *         To open index.html in your browser, right click on the file and select "vscode-preview-server"
+ *         https://github.com/typicode/json-server/issues/1106
  * 
  **/
 
@@ -24,22 +25,20 @@
 const STUDENT_DATA=[];
 
 // function fetches all students from the API and stores in the STUDENT_DATA array
-function fetchStudents(API) {
-
-  // with jQuery (not recommended 👎)
-  // $.get(api_url_here).then(data => console.log(data))
+function fetchStudents(API_URL) {
 
   // fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
   STUDENT_DATA.length = 0; // reset the array
 
   // fetch returns a promise: https://developer.mozilla.org/en-US/docs/Web/API/fetch
-  return fetch(API)
+  return fetch(API_URL)
             .then(res => res.json())
             .then(data => {  // chaining promises
                 STUDENT_DATA.push(...data);
                 console.log(STUDENT_DATA);
             })
+            // .then(() => renderStudents()
             .catch(err => console.log(err))
 }
 
@@ -48,6 +47,8 @@ function renderStudents() {
 
     const table = document.querySelector('table');
     const tbody = document.querySelector('tbody');
+
+    tbody.innerHTML = ''; // clear the table for re-rendering
 
     console.log("*** renderinStudents =>", `${STUDENT_DATA.length} students`);
 
@@ -85,18 +86,17 @@ function renderStudents() {
 // function adds a student to the API
 function postStudent(student) {
 
-    const url = 'http://localhost:3000/studentRoster';
+    const API_URL = 'http://localhost:3000/studentRoster';
 
     // add
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(student)
-    })
-    .then(res => res.json())
-    .then(data => STUDENT_DATA.push(...data))
+    return fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(student) // convert JS object to JSON string
+            })
+            .catch(err => console.log(err))
 }
 
 // function deletes a student from the API
@@ -108,8 +108,7 @@ function deleteStudent(id) {
 
         method: 'DELETE'
     })
-    .then(res => res.json())
-    .then(data => STUDENT_DATA.filter(data => data.id !== id))
+    .catch(err => console.log(err))
 
   }
 
@@ -117,11 +116,11 @@ function submitHandler() {
 
     const form = document.querySelector('form');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
 
         e.preventDefault();
 
-        const id = STUDENT_DATA.length + 1;
+        const id = Math.floor(Math.random() * (1000 - STUDENT_DATA.length) + STUDENT_DATA.length); // unique id
         const name = form.querySelector('#full-name').value;
         const assignment = form.querySelector('#research-assignment').value;
 
@@ -131,15 +130,26 @@ function submitHandler() {
             researchAssignment: assignment
         }
 
-        postStudent(student);
+        console.log("student added to API >>>", student);
+
+        // add student to API, re-fetching and then re-rendering the students
+        await postStudent(student);
+
+        // fetch students
+        await fetchStudents('http://localhost:3000/studentRoster');
+
+        // render students with new student (json-server automatically adds the student to the db.json file)
+
+        // reset the form
+        form.reset();
     })
 
 }
 
-// boilerplate app (to start the app):
+// scaffold app (setup the app):
 // note: async means that a function defined inside will return a promise
 addEventListener('DOMContentLoaded', async () => {
-
+        
     // fetch students:
     // await: makes a function wait for a promise (makes asynchrnous code look synchronous)
     await fetchStudents('http://localhost:3000/studentRoster');

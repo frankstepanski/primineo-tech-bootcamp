@@ -8,7 +8,6 @@ import './App.css' /* imports CSS from App.css */
   - props are passed from parent to child
   - props can be literal data, variables, functions or even other components
 
-
   State:
   - state is mutable- it can be changed
   - state is defined normally in a functional component using the useState hook
@@ -18,10 +17,6 @@ import './App.css' /* imports CSS from App.css */
   - hooks are functions that allow us to use state and other React features in functional components
   - useState: hook that allows us to use state in functional components
   - useEffect: hook that allows us to use lifecycle methods in functional components
-
-
-
-
 
 */
 

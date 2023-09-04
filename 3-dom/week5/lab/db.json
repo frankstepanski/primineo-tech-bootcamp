@@ -1,24 +1,19 @@
 {
   "studentRoster": [
     {
-      "fullName": "Ora Thiel",
-      "researchAssignment": "bear",
-      "id": "1"
+      "id": 927,
+      "fullName": "new student",
+      "researchAssignment": "test"
     },
     {
-      "fullName": "Mr. Tyrone Ziemann II",
-      "researchAssignment": "dog",
-      "id": "2"
+      "id": 555,
+      "fullName": "frankie",
+      "researchAssignment": "who knows"
     },
     {
-      "fullName": "Pete Heard",
-      "researchAssignment": "cat",
-      "id": "3"
-    },
-    {
-      "fullName": "Tom Brady",
-      "researchAssignment": "bird",
-      "id": "4"
+      "id": 350,
+      "fullName": "erer",
+      "researchAssignment": "erer"
     }
   ]
 }

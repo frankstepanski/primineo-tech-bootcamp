@@ -1,4 +1,5 @@
 import React from 'react'
+import Square from './Square.jsx'
 
 const style = {
     border: "4px solid darkblue",

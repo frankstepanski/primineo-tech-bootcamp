@@ -14,12 +14,7 @@ const style = {
     fontSize: '40px',
     fontWeight: '800',
     cursor: 'pointer',
-    outline: 'none',
-    display: flex,
-    justifyContent: center,
-    alignItems: center,
-    cursor: pointer,
-    outline: none
+    outline: 'none'
 }   
 
 /*
