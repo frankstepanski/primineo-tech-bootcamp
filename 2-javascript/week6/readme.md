@@ -207,6 +207,16 @@ describe('Bank account methods and properties', () => {
 
 Resources:
 
-- <a href="https://jestjs.io/docs/getting-started">Getting Started docs</a>
+- Node
+  - [Overview and setup](https://www.youtube.com/watch?v=zb3Qk8SG5Ms)
+  - [Documentation](https://nodejs.org/docs/latest-v19.x/api/)
+  - [Download](https://nodejs.org/en/download)
+- Npm:
+   - [What is package.json?](https://heynode.com/tutorial/what-packagejson/)
+   - [What are NPM scripts?](https://heynode.com/tutorial/what-are-npm-scripts/)
+   - [What is package-lock.json?](https://heynode.com/tutorial/what-package-lockjson/)
+   - [Creating a .gitignore file](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/)
+- Testing:
+   - <a href="https://jestjs.io/docs/getting-started">Getting Started docs</a>
 - <a href="https://www.youtube.com/watch?v=7r4xVDI2vho&t=583s">Crash Course</a>
 - <a href="https://www.smashingmagazine.com/2020/06/practical-guide-testing-react-applications-jest/">Types of Testing with Jest</a>
