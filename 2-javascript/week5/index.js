@@ -58,12 +58,12 @@ function createPerson(name, age) {
 const person1 = createPerson("John", 30);
 
 // 3- constructor function (not as common as object literal - legacy code):
-function Customer(name) {
+function Customer(name, address, city, state, zip) {
     this.name = name;
-    this.address = "123 Main St";
-    this.city = "New York";
-    this.state = "NY";
-    this.zip = "10001";
+    this.address = address;
+    this.city = city
+    this.state = state;
+    this.zip = zip
 }
 
 const customer = new Customer("John Wall");

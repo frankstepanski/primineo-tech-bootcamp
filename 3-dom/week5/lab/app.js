@@ -35,7 +35,7 @@ function fetchStudents(API_URL) {
   return fetch(API_URL)
             .then(res => res.json())
             .then(data => {  // chaining promises
-                STUDENT_DATA.push(...data);
+                STUDENT_DATA.push(...data); // add all students to 'state'
                 console.log(STUDENT_DATA);
             })
             // .then(() => renderStudents()
